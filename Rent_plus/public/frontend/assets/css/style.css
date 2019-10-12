@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,ol,li{
+    list-style-type: none;
+}
+
+h1,h2,h3,h4,h5,h6, p{
+    margin: 0;
+    padding: 0;
+}
+.container img{
+    width: 200px;
+    height: 100px;
+}
+
+.head_menu{
+    background: white;
+}
+
+#mynav .postad_item{
+    border-radius: 3px ;
+    background-color: red;
+
+}
+
+#mynav .postad_item a:hover{
+    background-color: #343a40;
+    color: white;
+    -webkit-transition: .5s;
+}
+#mynav .postad_item a{
+    color: white;
+    -webkit-transition: .5s;
+}
+#mynav .login a:hover{
+    color: red;
+    -webkit-transition: .5s;
+
+}
+#mynav .signin a:hover{
+    color: red;
+    -webkit-transition: .5s;
+
+}
+
+
+#mynav ul li a{
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    color:#1b1e21;
+    padding: 0 25px;
+}
+
+#mynav ul li a:hover{
+    color:#721c24 ;
+    -webkit-transition: .5s;
+}
+#mynav ul li a:hover{
+    color: #1b1e21;
+    -webkit-transition: .5s;
+
+}
+/*toggle*/
+#mynav #addmodel #modbod ul{
+    float: left;
+}
+#mynav #addmodel #modbod ul li{
+    float: right;
+    border:1px solid #0f6674;
+    padding: 5px 5px 5px 5px;
+    padding-bottom: 20px;
+
+}
+#mynav #addmodel #modbod ul li a{
+
+    color:#0f6674;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+#mynav #addmodel #modbod ul li:hover{
+    border:1px solid #1d2124;
+    text-shadow: #1d2124;
+    background-color: rgba(7,28,52,0.3);
+    -webkit-transition: .5s;
+
+
+}
+
+.nav-link .fa-home{
+    color:#1b1e21;
+    -webkit-transition: .5s;
+}
+.nav-link .fa-user{
+    color:#1b1e21;
+}
+.nav-link .fa-comments:hover{
+    color:#b9bbbe;
+    -webkit-transition: .5s;
+}
+.nav-link .fa-bell:hover{
+    color:#b9bbbe;
+    -webkit-transition: .5s;
+}
+.nav-link .fa-user-circle:hover{
+    color:#b9bbbe;
+    -webkit-transition: .5s;
+}
+.navuser{
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    color:#1b1e21;
+    padding: 0 25px;
+}
+
+#banner .input a{
+    padding-left: 20px;
+}
+
+
+/* banner part css */
+#banner .carousel-item{
+    height: 500px;
+    background-position: center!important;
+    background-size: cover !important;
+}
+
+
+#banner .carousel-caption{
+    bottom:50%;
+    transform: translateY(50%);
+}
+#banner .form-row .btn_search button{
+    background-color: #ffdf7e;
+    border: 1px ;
+    color:#062c33;
+
+}
+
+#banner .form-row .btn_search button:hover{
+    background-color: #721c24;
+    -webkit-transition: .5s;
+}
+#banner .carousel-caption h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color:  #ffdf7e;
+}
+
+
+/* about part */
+.about_part{
+    padding: 100px 0;
+
+}
+.about_part  h2{
+    color:#721c24;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+.about_inner h4{
+    color: #343a40;
+    font-family: 'Raleway', sans-serif;
+    font-weight: initial;
+}
+.about_inner p{
+    color: #1b1e21;
+    font-family: 'Raleway', sans-serif;
+    font-weight: initial;
+
+}
+.about_inner a{
+    color: #062c33;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 15px;
+}
+.about_inner a:hover{
+    color:#5a6268;
+    -webkit-transition: .5s;
+}
+
+.about_part .row .about_inner{
+
+    border-radius: 3px;
+}
+.about_part .section_head2 a{
+    color:#721c24;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.about_part .section_head2 a:hover{
+    color:#1c7430;
+    -webkit-transition: .5s;
+}
+
+
+
+/* scrvice part*/
+.All_rents{
+    padding-top: 50px;
+}
+.All_rents h2{
+    color:#721c24;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+.All_rents h4{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: initial;
+}
+.All_rents p{
+    color: #E7EBE0FF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: initial;
+
+}
+.All_rents .row .about_inner1{
+    background:linear-gradient(to right,#721c24,rgba(75,31,22,0.3));
+}
+
+.All_rents .row .about_inner1:hover{
+
+    background-color:  #606060FF;
+
+    box-shadow: 2px 4px 8px 2px rgba(42,39,18,0.39), 2px 6px 20px 2px rgba(33,42,16,0.03);
+    -webkit-transition: .5s;
+}
+.All_rents .section_head2 a{
+    color:#721c24;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.All_rents .section_head2 a:hover{
+    color:#1c7430;
+    -webkit-transition: .5s;
+}
+.about_inner1 a{
+    color:  #062c33;
+    font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+    font-size: 15px;
+
+
+}
+.about_inner1 a:hover{
+    color:#7DB46CFF;
+    -webkit-transition: .5s;
+}
+.post_add .jumbotron .row .postadd_h1{
+    color:#721c24;
+
+}
+.post_add .jumbotron .row button{
+    background-color: #721c24;
+    border: 1px solid #721c24;
+
+}
+.post_add .jumbotron .row button:hover{
+
+    background-color: #1d2124;
+    border: 1px solid #1d2124;
+    -webkit-transition: .5s;
+}
+.post_add .jumbotron .row button a{
+    text-decoration: none;
+    color: white;
+}
+.myfooter{
+    background-color: #1b1e21;
+}
+.myfooter .section_head3 h2,h4{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+.myfooter .section_head3 p{
+    font-family: 'Raleway', sans-serif;
+    color:#b9bbbe;
+}
+.myfooter .section_head3 a{
+    font-family: 'Raleway', sans-serif;
+    color:#b9bbbe;
+
+}
+.myfooter .section_head3 a:hover{
+    color:#721c24;
+    -webkit-transition: .5s;
+}
+
+/*login*/
+
+.login_form{
+    margin-top: 100px;
+    margin-bottom: 250px;
+}
+.login_form .form_class{
+
+    margin-left: 290px;
+    padding-bottom: 100px;
+}
+.login_form .form_class h1{
+    color:#721c24;
+    font-size: 40px;
+
+    font-family: 'Raleway', sans-serif;
+
+}
+.login_form .form_class .username_margin{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.login_form .form_class .submit_form button{
+color: white;
+    background-color:#1d2124;
+
+}
+.login_form .form_class .submit_form button:hover{
+    background-color: #721c24;
+    -webkit-transition: .5s;
+}
+
+.login_form .form_class .passcontrol .fp{
+    text-decoration: none;
+    color: #1d2124;
+}
+/* signin*/
+.signin_form{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.signin_form .form_class{
+
+    margin-left: 290px;
+    padding-bottom: 100px;
+
+}
+.signin_form .form_class h1{
+    color:#721c24;
+    font-size: 40px;
+
+    font-family: 'Raleway', sans-serif;
+
+}
+.signin_form .form_class .username_margin{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.signin_form .form_class .submit_form button{
+    color: white;
+    background-color:#1d2124;
+
+}
+.signin_form .form_class .submit_form button:hover{
+    background-color: #721c24;
+    -webkit-transition: .5s;
+}
+
