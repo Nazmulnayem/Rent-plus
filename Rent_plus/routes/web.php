@@ -12,7 +12,9 @@
 */
 
 Route::get('/', 'welcomeController@welcomepage')->name('welcome');
+Route::get('/postad', 'postadController@postadsave')->name('');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
