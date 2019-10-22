@@ -323,6 +323,20 @@ h1,h2,h3,h4,h5,h6, p{
     font-family: 'Raleway', sans-serif;
 
 }
+.login_form .form_class .loginfacebook h1{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    background-color: #005cbf;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #005cbf;
+}
+.login_form .form_class .loginfacebook h1 a{
+    text-decoration: none;
+    color:white;
+
+}
 .login_form .form_class .username_margin{
     margin-top: 50px;
     margin-left: 100px;

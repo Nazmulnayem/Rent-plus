@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-8 bg-white form_class shadow-lg">
                     <div class="text-center mt-4">
-                        <h1 >Signin</h1>
+                        <h1 >Post A Rent</h1>
                     </div>
                     <form method="" action="">
                         <div class="form-row align-items-center username_margin">
@@ -22,9 +22,9 @@
                                 </label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
+                                        <div class="input-group-text text-center"><i class="fa fa-home"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Fullname">
+                                    <input type="text" class="form-control" placeholder="HouseName" required>
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
@@ -34,9 +34,9 @@
                                 </label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text text-center"><i class="fa fa-phone"></i></div>
+                                        <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                    <input type="text" class="form-control" placeholder="UserName" required>
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
@@ -48,7 +48,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-house-damage"></i></div>
                                     </div>
-                                    <textarea  class="form-control" placeholder="Permanent Address"></textarea>
+                                    <input type="number" class="form-control" placeholder="Available floor" required>
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
@@ -60,7 +60,11 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-home"></i></div>
                                     </div>
-                                    <textarea  class="form-control" placeholder="Present Address"></textarea>
+                                    <select class="form-control">
+                                        <option>Area</option>
+                                        <option>Area</option>
+                                        <option>Area</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
@@ -70,9 +74,57 @@
                                 </label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text text-center"><i class="fa fa-lock"></i></div>
+                                        <div class="input-group-text text-center"><i class="fa fa-home"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Password">
+                                    <select class="form-control">
+                                        <option>City</option>
+                                        <option>Area</option>
+                                        <option>Area</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 mt-3">
+                                <label class="sr-only">
+
+
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-home"></i></div>
+                                    </div>
+                                    <select class="form-control">
+                                        <option>Division</option>
+                                        <option>Area</option>
+                                        <option>Area</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 mt-3">
+                                <label class="sr-only">
+
+
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-home"></i></div>
+                                    </div>
+                                    <select class="form-control">
+                                        <option>Payment method</option>
+                                        <option>Bkash</option>
+                                        <option>Dutch Bangla</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 mt-3">
+                                <label class="sr-only">
+
+
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-house-damage"></i></div>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="TransectionID" required>
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">

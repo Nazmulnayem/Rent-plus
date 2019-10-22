@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-lg navbar-light head_menu shadow-lg" id="header">
+<nav class="navbar navbar-expand-lg navbar-light head_menu shadow-lg " id="header" >
     <div class="container clearfix " >
-        <a class="navbar-brand " href="index.php"><img src="public/frontend/image/rp.PNG" alt=""></a>
+        <a class="navbar-brand " href="{{url('/')}}"><img src="public/frontend/image/rp.PNG" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" >
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="mynav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
+                    <a class="nav-link" href="{{url('/')}}"><i class="fas fa-home"></i></a>
                 </li>
 
                 <li class="nav-item">
@@ -25,6 +25,7 @@
                 <li class="nav-item postad_item">
                     <a class="nav-link post_ad" href="#" data-toggle="modal" data-target="#addmodel">Post RENT+ </a>
                 </li>
+
 
                 <li class="nav-item login">
                     <a class="" href="{{route('login')}}"  >Login </a>
@@ -61,7 +62,7 @@
                 </div>
 
                 <li class="nav-item signin">
-                    <a class="" href="admin/signin.html">Signin</a>
+                    <a class="" href="{{route('register')}}">Signin</a>
                 </li>
             </ul>
 
