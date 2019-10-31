@@ -12,9 +12,20 @@
 */
 
 Route::get('/', 'welcomeController@welcomepage')->name('welcome');
-Route::get('/postad', 'postadController@postadsave')->name('');
+Route::get('/postad', 'postadController@postad')->name('');
+Route::post('/postad/save', 'postadController@postadsave')->name('');
+
 
 Auth::routes();
+//facebook socialite
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware'=>'AuthenticateMiddleware'],function(){
+
+
+
+});
 

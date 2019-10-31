@@ -17,13 +17,13 @@
                     <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Chat" href="#"><i class="far fa-comments"></i><span class="badge badge-light">2</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="Notification" href="#"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a>
+                    <a class="nav-link" href="{{route('login')}}" data-toggle="tooltip" data-placement="top" title="Notification" href="#"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/profile.html" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fas fa-user-circle"></i></a>
+                    <a class="nav-link" href="{{route('login')}}" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fas fa-user-circle"></i></a>
                 </li>
                 <li class="nav-item postad_item">
-                    <a class="nav-link post_ad" href="#" data-toggle="modal" data-target="#addmodel">Post RENT+ </a>
+                    <a class="nav-link post_ad" href="{{route('login')}}" >Post RENT+ </a>
                 </li>
 
 
@@ -31,35 +31,7 @@
                     <a class="" href="{{route('login')}}"  >Login </a>
                 </li>
                 <!-- Modal -->
-                <div class="modal fade" id="addmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document" class="justify-content-center text-center">
-                        <div class="modal-content ">
-                            <div class="modal-header">
-                                <h5 class="modal-title text-info text-center pl-5" id="exampleModalLongTitle">Choose your Plan</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body" id="modbod">
-                                <div class="row text-center justify-content-center">
-                                    <div class="col-lg-12">
-                                        <ul>
 
-                                            <li><a href="{{url('/postad')}}">Standard 50tk</a></li>
-                                            <li><a href="{{url('/postad')}}">Premium 100tk</a></li>
-                                        </ul>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <li class="nav-item signin">
                     <a class="" href="{{route('register')}}">Signin</a>

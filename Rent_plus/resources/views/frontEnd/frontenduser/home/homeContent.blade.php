@@ -1,4 +1,4 @@
-@extends('frontEnd.master')
+@extends('frontEnd.frontenduser.master')
 
 @section('title')
     Rentplus
@@ -13,57 +13,14 @@
 
 
                 <div class="carousel-item active" style="background:linear-gradient(to right,#0c5460,#4e555b);">
-                    <div class="carousel-caption">
-                        <h1 class="bounceIn mb-5">Only for House rent</h1>
+                    <div class="carousel-caption" id="app">
+                        <h1 class="bounceIn mb-5">Only for House Rents</h1>
                         <p></p>
-                        <form>
 
-                            <div class="form-row justify-content-center">
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-md-3">
-                                        <label for="inputState" ><h3 style="color:#1c7430;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">Division</h3></label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Select your City</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="inputState" ><h3  style="color:#ba8b00;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700; border: 1px #a71d2a">City</h3></label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Select your Division</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState"><h3 style="color:#a71d2a;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">AREA</h3></label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Select your Area</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState" ><h3 style="color:#1c7430;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">Type</h3></label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Select your City</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState" ><h3  style="color:#ba8b00;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700; border: 1px #a71d2a">Budged</h3></label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Select your Division</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div  class="form-group btn_search">
-                                    <button type="submit" class="btn btn-primary mt-3">Search</button>
-                                </div>
+                        <div id="app">
 
-
-                            </div>
-                        </form>
-                    </div>
-
+                            <home-component></home-component>
+                        </div>
 
                 </div>
 
@@ -73,7 +30,9 @@
         </div>
 
 
+
     </section>
+
     <section class="about_part" id="Toprents">
         <div class="container">
             <div class="row justify-content-center text-center">
@@ -155,29 +114,29 @@
             </div>
 
             <div class="row">
-
                 @foreach($postads as $postad)
-                    <div class="col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad">
-                        <div class="about_inner1 pl-5 pr-5 pt-5 pb-5">
-                            <h4 ><i class="fas fa-home mr-3"></i> HouseName: <a href="">{{$postad->Housename}}</a></h4>
-                            <p ><i class="fas fa-user-tie"></i> HouseOwner: <a href="">{{$postad->RenterUsername}}</a></p>
-                            <p ><i class="fas fa-user-tie"></i> Avaiable floor: {{$postad->availablefloor}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Type: {{$postad->type_rent}}</p>
-                            <p ><i class="fas fa-check-circle"></i> budget: {{$postad->budget_rent}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Area: {{$postad->Areaselect}}</p>
-                            <p ><i class="fas fa-check-circle"></i> City: {{$postad->Cityselect}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Division: {{$postad->Divisionselect}}</p>
-                            <p ><i class="fas fa-user-tie"></i> Phone number: {{$postad->phonenumber}}</p>
-                            <p ><i class="fas fa-check-circle"></i> click here for details</p>
-                            <div class="">
-                                <a href="{{url('/login')}}" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
-                                <a href="{{url('/login')}}" class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a>
-                                <a href="{{url('/login')}}" class="" role="button" title="See Details" style="font-size: 26px;"><i class="fa fa-reply"></i></a>
-                            </div>
+                <div class="col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad">
+                    <div class="about_inner1 pl-5 pr-5 pt-5 pb-5">
+                        <h4 ><i class="fas fa-home mr-3"></i> HouseName: <a href="">{{$postad->Housename}}</a></h4>
+                        <p ><i class="fas fa-user-tie"></i> HouseOwner: <a href="">{{$postad->RenterUsername}}</a></p>
+                        <p ><i class="fas fa-user-tie"></i> Avaiable floor: {{$postad->availablefloor}}</p>
+                        <p ><i class="fas fa-check-circle"></i> Type: {{$postad->type_rent}}</p>
+                        <p ><i class="fas fa-check-circle"></i> budget: {{$postad->budget_rent}}</p>
+                        <p ><i class="fas fa-check-circle"></i> Area: {{$postad->Areaselect}}</p>
+                        <p ><i class="fas fa-check-circle"></i> City: {{$postad->Cityselect}}</p>
+                        <p ><i class="fas fa-check-circle"></i> Division: {{$postad->Divisionselect}}</p>
+                        <p ><i class="fas fa-user-tie"></i> Phone number: {{$postad->phonenumber}}</p>
+                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
+                        <div class="">
+                            <a href="{{route('home')}}" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
+                            <a href="" class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a>
+                            <a href="" class="" role="button" title="See Details" style="font-size: 26px;"><i class="fa fa-reply"></i></a>
                         </div>
-
                     </div>
-                @endforeach
+
+                </div>
+                    @endforeach
+
 
             </div>
             <div class="row justify-content-center text-center">

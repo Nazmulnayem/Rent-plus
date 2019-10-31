@@ -233,12 +233,12 @@ h1,h2,h3,h4,h5,h6, p{
 
 }
 .All_rents .row .about_inner1{
-    background:linear-gradient(to right,#721c24,rgba(75,31,22,0.3));
+    background:linear-gradient(to right,#20c997,rgba(43,43,43,0.43));
 }
 
 .All_rents .row .about_inner1:hover{
 
-    background-color:  #606060FF;
+    background-color:  #b9bbbe;
 
     box-shadow: 2px 4px 8px 2px rgba(42,39,18,0.39), 2px 6px 20px 2px rgba(33,42,16,0.03);
     -webkit-transition: .5s;
@@ -323,16 +323,18 @@ h1,h2,h3,h4,h5,h6, p{
     font-family: 'Raleway', sans-serif;
 
 }
-.login_form .form_class .loginfacebook h1{
+.login_form .form_class .loginfacebook button{
     font-size: 18px;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
     color:white;
     background-color: #005cbf;
-    padding: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    padding-left: 55px;
+    padding-right: 55px;
     border: 1px solid #005cbf;
 }
-.login_form .form_class .loginfacebook h1 a{
+.login_form .form_class .loginfacebook button a{
     text-decoration: none;
     color:white;
 

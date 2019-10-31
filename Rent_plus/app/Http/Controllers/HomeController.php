@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\postad;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontEnd.frontenduser.master');
+        $postads = Postad::all();
+
+
+        return view('frontEnd.frontenduser.home.homeContent', ['postads' => $postads]);
     }
 }

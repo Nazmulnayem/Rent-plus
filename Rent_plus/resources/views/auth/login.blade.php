@@ -13,7 +13,7 @@
                         <h1 >Login</h1>
                     </div>
                     <div class="text-center mt-4 loginfacebook">
-                        <h1 ><a href="">Login with Facebook</a></h1>
+                        <button ><a href="{{url('/login/facebook')}}">Login with <i class="fab fa-facebook-f"></i></a></button>
                     </div>
                     <form role="form" method="POST" action="{{url('/login')}}">
                         {{ csrf_field() }}

@@ -88,6 +88,13 @@
       <path value="$PROJECT_DIR$/Rent_plus/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/Rent_plus/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/Rent_plus/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/Rent_plus/vendor/ralouphie/getallheaders" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

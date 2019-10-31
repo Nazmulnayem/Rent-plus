@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\postad;
 use Illuminate\Http\Request;
 
 class welcomeController extends Controller
 {
   public function welcomepage(){
-      return view('frontEnd.home.homeContent');
+      $postads = Postad::all();
+      return view('frontEnd.home.homeContent',['postads' => $postads]);
   }
 }
