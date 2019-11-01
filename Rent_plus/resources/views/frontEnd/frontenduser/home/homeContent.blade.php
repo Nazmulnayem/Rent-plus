@@ -44,9 +44,9 @@
                 </div>
             </div>
 
-            <div class="row slick_top shadow-sm justify-content-center text-center" >
+            <div class="row slick_top shadow-sm justify-content-center text-center" style="background:linear-gradient(to right,#ffe70a,rgba(43,43,43,0.43));">
                 <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner">
+                    <div class="about_inner1">
                         <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner">
+                    <div class="about_inner1">
                         <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner">
+                    <div class="about_inner1">
                         <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner">
+                    <div class="about_inner1">
                         <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>

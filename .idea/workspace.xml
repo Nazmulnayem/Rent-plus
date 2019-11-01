@@ -2,35 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0276396-5ea4-4e34-8101-74f35bb1f118" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/homecontent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/rentdetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/includes/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/includes/menu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/postad/postadContent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Rent-plus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rent-plus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/postadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/postadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/welcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/welcomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/master.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rent_plus/public/frontend/assets/js/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/public/frontend/assets/js/myjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/postad/postadcontent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/postad/postadcontent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/includes/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/postad/postad.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/postad/postad.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rent_plus/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Rent_plus/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,33 +20,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/homecontent.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#label#0;n#div#4;n#div#0;n#div#0;n#form#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/rentdetails.vue">
+        <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+              <folding>
+                <element signature="e#4450#4523#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,17 +35,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/postad/postadcontent.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1360">
-              <caret line="116" column="61" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="61" />
+            <state relative-caret-position="501">
+              <caret line="259" column="37" selection-start-line="259" selection-start-column="37" selection-end-line="259" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/ExampleComponent.vue">
+        <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="374">
+              <caret line="22" column="30" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <element signature="e#1229#1302#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rent_plus/public/frontend/assets/js/myjs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3366">
+              <caret line="198" selection-start-line="198" selection-end-line="198" />
             </state>
           </provider>
         </entry>
@@ -201,16 +180,17 @@
         <option value="$PROJECT_DIR$/Rent_plus/app/postad.php" />
         <option value="$PROJECT_DIR$/Rent_plus/database/migrations/2019_10_26_063839_create_postads_table.php" />
         <option value="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/postad/postadContent.blade.php" />
-        <option value="$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css" />
         <option value="$PROJECT_DIR$/Rent_plus/routes/web.php" />
         <option value="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/postadController.php" />
         <option value="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/Rent_plus/app/Http/Controllers/welcomeController.php" />
-        <option value="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php" />
-        <option value="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php" />
-        <option value="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/postad/postadcontent.vue" />
         <option value="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/homecontent.vue" />
         <option value="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/rentdetails.vue" />
+        <option value="$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/Rent_plus/public/frontend/assets/js/myjs.js" />
+        <option value="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php" />
+        <option value="$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/postad/postadcontent.vue" />
+        <option value="$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php" />
       </list>
     </option>
   </component>
@@ -311,7 +291,7 @@
       <path value="$PROJECT_DIR$/Rent_plus/vendor/ralouphie/getallheaders" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -322,7 +302,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -398,6 +377,15 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rent-plus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rent-plus" type="462c0819:PsiDirectoryNode" />
+              <item name="Rent_plus" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Rent-plus" type="b2602c69:ProjectViewProjectNode" />
@@ -522,6 +510,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -651,6 +640,10 @@
       <workItem from="1572355287502" duration="1575000" />
       <workItem from="1572358555003" duration="1771000" />
       <workItem from="1572360641865" duration="1778000" />
+      <workItem from="1572528622360" duration="1123000" />
+      <workItem from="1572532457400" duration="1793000" />
+      <workItem from="1572534287648" duration="1258000" />
+      <workItem from="1572601312245" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1571501430738</created>
@@ -663,13 +656,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125991000" />
+    <option name="totallyTimeSpent" value="130222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23827292" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2489339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -698,20 +691,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rent_plus/database/migrations/2019_08_19_000000_create_failed_jobs_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rent_plus/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rent_plus/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -912,20 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2924">
-          <caret line="172" column="58" selection-start-line="172" selection-start-column="41" selection-end-line="172" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="240" column="31" selection-start-line="240" selection-start-column="31" selection-end-line="240" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/includes/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -940,10 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php">
+    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/rentdetails.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -951,6 +916,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rent_plus/public/frontend/assets/js/slick.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/homecontent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#label#0;n#div#4;n#div#0;n#div#0;n#form#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rent_plus/public/frontend/assets/js/myjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rent_plus/public/frontend/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
         </state>
       </provider>
     </entry>
@@ -1000,26 +999,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/postad/postadcontent.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1360">
-          <caret line="116" column="61" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="61" />
+        <state relative-caret-position="501">
+          <caret line="259" column="37" selection-start-line="259" selection-start-column="37" selection-end-line="259" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/homecontent.vue">
+    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/frontenduser/home/homeContent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        <state relative-caret-position="374">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="22" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#h3#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#label#0;n#div#4;n#div#0;n#div#0;n#form#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1229#1302#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/js/components/frontend/home/rentdetails.vue">
+    <entry file="file://$PROJECT_DIR$/Rent_plus/resources/views/frontEnd/home/homeContent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        <state relative-caret-position="255">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="e#4450#4523#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

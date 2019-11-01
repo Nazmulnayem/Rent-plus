@@ -16,52 +16,10 @@
                     <div class="carousel-caption">
                         <h1 class="bounceIn mb-5">Only for House rent</h1>
                         <p></p>
-                        <form>
+                        <div id="app">
 
-                            <div class="form-row justify-content-center">
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-md-3">
-                                        <label for="inputState" ><h3 style="color:#1c7430;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">Division</h3></label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Select your City</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="inputState" ><h3  style="color:#ba8b00;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700; border: 1px #a71d2a">City</h3></label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Select your Division</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState"><h3 style="color:#a71d2a;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">AREA</h3></label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Select your Area</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState" ><h3 style="color:#1c7430;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">Type</h3></label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Select your City</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState" ><h3  style="color:#ba8b00;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700; border: 1px #a71d2a">Budged</h3></label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Select your Division</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div  class="form-group btn_search">
-                                    <button type="submit" class="btn btn-primary mt-3">Search</button>
-                                </div>
-
-
-                            </div>
-                        </form>
+                            <home-component></home-component>
+                        </div>
                     </div>
 
 
@@ -85,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="row slick_top shadow-sm justify-content-center text-center" >
+            <div class="row slick_top shadow-sm justify-content-center text-center" style="background:linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43));">
                 <div class="col-lg-3  pb-4 ">
                     <div class="about_inner">
                         <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
