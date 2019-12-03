@@ -192,7 +192,7 @@
                             </div>
                             <div class="col-lg-10 mt-3">
                                 <div class="submit_form">
-                                    <button type="submit" class="form-control" name="submit" v-on:click.prevent="postsave">Submit</button>
+                                    <button  class="form-control" @click.prevent="postsave">submit</button>
 
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
         },
         methods:{
             postsave(){
-                  alert('data save successfully');
+
 
                axios.post('./postad/save',{
                    RenterUsername:this.RenterUsername,
@@ -257,6 +257,7 @@
                })
                    .then(function(response){
                    console.log(response);
+                   alert(datasavesucccesfully);
                    location.reload();
                 })
                    .catch(function (error) {

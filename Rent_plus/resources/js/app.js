@@ -22,6 +22,8 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('home-component', require('./components/frontend/home/homecontent').default);
 Vue.component('postad-component', require('./components/frontend/postad/postadcontent').default);
+Vue.component('customersupport-component', require('./components/frontend/home/customersupport').default);
+Vue.component('chatbot-component', require('./components/frontend/chatbot').default);
 
 
 /**s

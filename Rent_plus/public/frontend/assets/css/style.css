@@ -254,6 +254,22 @@ h1,h2,h3,h4,h5,h6, p{
     color:#1c7430;
     -webkit-transition: .5s;
 }
+ #Allrents .massenger{
+
+
+     margin-left: 500px;
+}
+#Allrents .massenger h2{
+      margin-top: 30px;
+      font-size: 50px;
+    margin-left: 2000px;
+    color: #1c7430;
+
+}
+#Allrents .massenger h2:hover{
+    color: #1d2124;
+    -webkit-transition: .5s;
+}
 .about_inner1 a{
     color:  #062c33;
     font-family: 'Raleway', sans-serif;

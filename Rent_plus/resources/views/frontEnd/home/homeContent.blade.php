@@ -19,6 +19,13 @@
                         <div id="app">
 
                             <home-component></home-component>
+                            <div class="container pb-5 position-absolute">
+
+                                <customersupport-component></customersupport-component>
+
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -43,16 +50,16 @@
                 </div>
             </div>
 
-            <div class="row slick_top shadow-sm justify-content-center text-center" style="background:linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43));">
+            <div class="row slick_top shadow-sm justify-content-center" style="background:linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43));">
                 <div class="col-lg-3  pb-4 ">
                     <div class="about_inner">
                         <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
                         <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> Type: Family</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> budget: 20k</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> click here for details</p>
                     </div>
                 </div>
                 <div class="col-lg-3  pb-4 ">
@@ -61,9 +68,9 @@
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
                         <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> Type: Family</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> budget: 20k</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> click here for details</p>
                     </div>
                 </div>
                 <div class="col-lg-3  pb-4 ">
@@ -72,9 +79,9 @@
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
                         <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> Type: Family</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> budget: 20k</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> click here for details</p>
                     </div>
                 </div>
                 <div class="col-lg-3  pb-4 ">
@@ -83,9 +90,9 @@
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
                         <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
                         <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> Type: Family</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> budget: 20k</p>
+                        <p class="ml-3 pt-3"><i class="fas fa-check-circle"></i> click here for details</p>
                     </div>
                 </div>
 
@@ -101,7 +108,7 @@
         </div>
         </div>
     </section>
-    <section class="All_rents" id="Allrents">
+    <section class="All_rents position-relative" id="Allrents" >
         <div class="container pb-5">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
@@ -146,8 +153,16 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
+
+
+
+
+
     </section>
+
     <section class="post_add">
         <div class="jumbotron ">
             <div class="container">
