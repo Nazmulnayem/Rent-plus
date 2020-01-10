@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light head_menu shadow-lg " id="header" >
     <div class="container clearfix " >
-        <a class="navbar-brand " href="{{url('/')}}"><img src="public/frontend/image/rp.PNG" alt=""></a>
+        <a class="navbar-brand " href="{{url('/')}}"><img src="/frontend/image/rp.PNG" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" >
             <span class="navbar-toggler-icon"></span>
         </button>

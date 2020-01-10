@@ -15,17 +15,19 @@ class CreatePostadsTable extends Migration
     {
         Schema::create('postads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('RenterUsername',20);
-            $table->string('Housename',20);
-            $table->string('phonenumber',12);
-            $table->string('availablefloor',5);
-            $table->string('type_rent',10);
-            $table->string('budget_rent',10);
-            $table->string('Divisionselect',20);
-            $table->string('Cityselect',20);
-            $table->string('Areaselect',20);
+            $table->string('RenterUsername',100);
+            $table->string('Housename',200);
+            $table->string('phonenumber',50);
+            $table->string('availablefrom',50);
+            $table->string('availablefloor',50);
+            $table->string('type_rent',100);
+            $table->string('budget_rent',100);
+            $table->string('Divisionselect',200);
+            $table->string('Cityselect',200);
+            $table->string('Areaselect',200);
             $table->text('full_address');
             $table->text('About_rent');
+            $table->text('image');
             $table->timestamps();
         });
     }

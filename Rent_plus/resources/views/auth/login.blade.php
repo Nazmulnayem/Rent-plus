@@ -40,7 +40,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-lock"></i></div>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="Password" name="password">
+                                    <input type="password" class="form-control" placeholder="Password" name="password" required>
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">

@@ -5,7 +5,7 @@
 @endsection
 
 @section('mainContent')
-    <section id="banner">
+    <section id="banner" class="position-relative">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -16,18 +16,15 @@
                     <div class="carousel-caption">
                         <h1 class="bounceIn mb-5">Only for House rent</h1>
                         <p></p>
-                        <div id="app">
 
-                            <home-component></home-component>
-                            <div class="container pb-5 position-absolute">
-
-                                <customersupport-component></customersupport-component>
-
-
-                            </div>
-
-                        </div>
                     </div>
+
+
+                </div>
+                <div class="carousel-item" style="background:linear-gradient(to right,#0c5460,#4e555b);">
+                    <div class="carousel-caption">
+                        <h1 class="bounceIn mb-5">LogIn for better experience</h1>
+                        <p></p>
 
 
                 </div>
@@ -114,7 +111,8 @@
                 <div class="col-lg-10">
                     <div class="section_head1 pb-5 mb-5">
                         <h2 class="shadow-lg">All Rents</h2>
-
+                        <h2>Totall = {{$postads->total()}} posts</h2>
+                        <h2>In this page = {{$postads->count()}} posts</h2>
                     </div>
                 </div>
             </div>
@@ -147,8 +145,8 @@
             </div>
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10 ">
-                    <div class="section_head2 pt-3">
-                        <a href="">See More <i class="fas fa-external-link-square-alt"></i></a>
+                    <div class="section_head2 pt-3 text-center">
+                        {{$postads->links()}}
 
                     </div>
                 </div>

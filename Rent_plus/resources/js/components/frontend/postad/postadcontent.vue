@@ -15,12 +15,13 @@
 
 
                                 </label>
-                                <div class="input-group">
+                                <div class="input-group" :class="{ 'input-group--error': $v.RenterUsername.$error }">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
                                     </div>
                                     <p></p>
-                                    <input type="text" class="form-control" placeholder="Renter Username" v-model="RenterUsername" @click="Rent =! Rent">
+                                    <input type="text" @input="setName($event.target.value)" class="form-control" placeholder="Renter Username" v-model="RenterUsername" @click="Rent =! Rent">
+
                                 </div>
                             </div>
                             <div class="col-lg-10">
@@ -32,8 +33,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <p v-if="Rent"></p>
-                                    <p id="rent" v-else="Rent">Your User name is: {{RenterUsername}}</p>
+                                    <div class="error text-danger" v-if="!$v.RenterUsername.required">Field is required</div>
+                                    <div class="error" v-if="!$v.RenterUsername.minLength">Name must have at least {{$v.name.$params.minLength.min}} letters.</div>
 
                                 </div>
                             </div>
@@ -42,7 +43,7 @@
 
 
                                 </label>
-                                <div class="input-group">
+                                <div class="input-group" :class="{ 'input-group--error': $v.RenterUsername.$error }">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
                                     </div>
@@ -73,6 +74,18 @@
                                     <p v-if="phone"></p>
                                     <p id="phone" v-else="phone">Your phone number is: {{phonenumber}}</p>
 
+                                </div>
+                            </div>
+                            <div class="col-lg-10 mt-3">
+                                <label class="sr-only">
+
+
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-building"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Available from" v-model="availablefrom" >
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
@@ -191,6 +204,22 @@
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
+                                <label class="sr-only">
+
+
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-building"></i></div>
+                                    </div>
+                                    <input type="file" @change="chagePhote($event)" name="photo">
+
+                                </div>
+                                <img :src="image" alt="">
+
+                            </div>
+
+                            <div class="col-lg-10 mt-3">
                                 <div class="submit_form">
                                     <button  class="form-control" @click.prevent="postsave">submit</button>
 
@@ -209,6 +238,7 @@
 </template>
 
 <script>
+    import { required, minLength, between } from 'vuelidate/lib/validators'
     export default {
         data: function () {
             return {
@@ -216,6 +246,7 @@
                 RenterUsername: '',
                 Housename: '',
                 phonenumber: '',
+                availablefrom:'',
                 availablefloor:'',
                 types: ['Type','Family', 'Bachelor','Sub-let-family','sub-let-bechelor','sub-let-jobholder(Male)','sub-let-jobholder(Female)','sub-let-female','sub-let(husband-wife)','hostel-room','hostel-seat'],
                 type_rent:'Type',
@@ -231,39 +262,62 @@
                 About_rent:'',
                 phone: true,
                 Rent: true,
-                Datasave:'data save successfully'
-
+                image:'',
+                Datasave:'data save successfully',
+                submitStatus:null
+            }
+        },
+        validations: {
+            RenterUsername: {
+                required,
+                minLength: minLength(4)
             }
 
-
         },
-        methods:{
-            postsave(){
-
-
-               axios.post('./postad/save',{
-                   RenterUsername:this.RenterUsername,
-                   Housename: this.Housename,
-                   phonenumber: this.phonenumber,
-                   availablefloor: this.availablefloor,
-                   type_rent: this.type_rent,
-                   budget_rent: this.budget_rent,
-                   Divisionselect: this.Divisionselect,
-                   Cityselect: this.Cityselect,
-                   Areaselect: this.Areaselect,
-                   full_address: this.full_address,
-                   About_rent: this.About_rent
-
-               })
-                   .then(function(response){
-                   console.log(response);
-                   alert(datasavesucccesfully);
-                   location.reload();
+        methods: {
+            postsave() {
+                axios.post('./postad/save', {
+                    RenterUsername: this.RenterUsername,
+                    Housename: this.Housename,
+                    availablefrom: this.availablefrom,
+                    phonenumber: this.phonenumber,
+                    availablefloor: this.availablefloor,
+                    type_rent: this.type_rent,
+                    budget_rent: this.budget_rent,
+                    Divisionselect: this.Divisionselect,
+                    Cityselect: this.Cityselect,
+                    Areaselect: this.Areaselect,
+                    full_address: this.full_address,
+                    About_rent: this.About_rent,
+                    image:this.image
                 })
-                   .catch(function (error) {
-                       console.log(error);
+                    .then(function (response) {
+                        console.log(response);
+                        alert(datasavesucccesfully);
+                        location.reload();
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+                location.reload();
 
-                   })
+            },
+            setRenterUsername(value) {
+                this.RenterUsername = value
+                this.$v.RenterUsername.$touch()
+
+
+            },
+            chagePhote(event){
+                let file = event.target.files[0];
+                let reader = new FileReader();
+                reader.onload = event => {
+
+                    this.image = event.target.result
+                };
+
+                reader.readAsDataURL(file);
+
             }
         }
 
@@ -271,7 +325,7 @@
 </script>
 
 <style scoped>
-#rent{
-    color:#1e7e34;
-}
+    #rent{
+        color:#1e7e34;
+    }
 </style>

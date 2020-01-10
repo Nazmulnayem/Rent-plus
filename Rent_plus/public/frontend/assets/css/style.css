@@ -24,9 +24,10 @@ h1,h2,h3,h4,h5,h6, p{
     background: white;
 }
 
-#mynav .postad_item{
+#mynav .postad_item a{
     border-radius: 3px ;
     background-color: red;
+    text-decoration: none;
 
 }
 
@@ -38,6 +39,10 @@ h1,h2,h3,h4,h5,h6, p{
 #mynav .postad_item a{
     color: white;
     -webkit-transition: .5s;
+}
+#mynav .login a{
+    margin-top: 23px;
+    color: #721c24;
 }
 #mynav .login a:hover{
     color: red;
@@ -57,7 +62,7 @@ h1,h2,h3,h4,h5,h6, p{
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     color:#1b1e21;
-    padding: 0 25px;
+    margin:0 25px;
 }
 
 #mynav ul li a:hover{
@@ -76,7 +81,7 @@ h1,h2,h3,h4,h5,h6, p{
 #mynav #addmodel #modbod ul li{
     float: right;
     border:1px solid #0f6674;
-    padding: 5px 5px 5px 5px;
+    padding: 2px 2px 2px 2px;
     padding-bottom: 20px;
 
 }
@@ -244,15 +249,22 @@ h1,h2,h3,h4,h5,h6, p{
     box-shadow: 2px 4px 8px 2px rgba(42,39,18,0.39), 2px 6px 20px 2px rgba(33,42,16,0.03);
     -webkit-transition: .5s;
 }
-.All_rents .section_head2 a{
+ .pagination>li>a,
+ .pagination>li>span {
+     border: 1px solid #20c997;
+}
+.pagination>li>a:hover {
+    background: #20c997;
+    color: #fff;
+
+    -webkit-transition: .5s;
+}
+.All_rents .section_head2 {
+
     color:#721c24;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
 
-}
-.All_rents .section_head2 a:hover{
-    color:#1c7430;
-    -webkit-transition: .5s;
 }
  #Allrents .massenger{
 

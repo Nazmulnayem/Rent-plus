@@ -4,6 +4,7 @@
 
             <h1 v-if="show" @click="show=!show" title="Getting problem? ask here."><a href="#"><i class="fab fa-facebook-messenger"></i></a></h1>
             <div class="chatbot" v-else="">
+                {{conversation}}
                 <h6 v-if="conversation == 'hi'">
 
                     <p>How can we help you?</p>

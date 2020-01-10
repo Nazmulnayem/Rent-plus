@@ -4,34 +4,43 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
 
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+import Vuex from 'vuex'
+Vue.use(Vuex)
+import storedata from './store/index'
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+import VueRouter from 'vue-router';
+Vue.use(VueRouter)
+import {routes} from "./routes";
+
+
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate)
+
+
+
+
+
+const store = new Vuex.Store(
+    storedata
+)
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('home-component', require('./components/frontend/home/homecontent').default);
-Vue.component('postad-component', require('./components/frontend/postad/postadcontent').default);
-Vue.component('customersupport-component', require('./components/frontend/home/customersupport').default);
-Vue.component('chatbot-component', require('./components/frontend/chatbot').default);
+Vue.component('home-component', require('./components/admin/adminmaster').default);
 
 
-/**s
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+
+const router = new VueRouter({
+    routes,
+    mode:'history'
+})
 
 const app = new Vue({
     el: '#app',
+    router,
+    store
 });
