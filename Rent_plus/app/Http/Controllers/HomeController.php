@@ -24,9 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $postads = Postad::all();
 
 
-        return view('frontEnd.frontenduser.master',['postads' => $postads]);
+
+        return view('frontEnd.frontenduser.master');
     }
 }

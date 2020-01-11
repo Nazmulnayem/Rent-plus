@@ -85,7 +85,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-building"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Available from" v-model="availablefrom" >
+                                    <input type="text" class="form-control" placeholder="Month Available from" v-model="availablefrom" >
                                 </div>
                             </div>
                             <div class="col-lg-10 mt-3">
@@ -208,16 +208,15 @@
 
 
                                 </label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text text-center"><i class="fa fa-building"></i></div>
-                                    </div>
-                                    <input type="file" @change="chagePhote($event)" name="photo">
+                                       <div>
+                                           <input type="file" @change="onImageChange" class="form-control">
 
-                                </div>
+                                       </div>
+
+
                                 <img :src="image" alt="">
-
                             </div>
+
 
                             <div class="col-lg-10 mt-3">
                                 <div class="submit_form">
@@ -276,7 +275,9 @@
         },
         methods: {
             postsave() {
-                axios.post('./postad/save', {
+
+
+                axios.post('/postad/save', {
                     RenterUsername: this.RenterUsername,
                     Housename: this.Housename,
                     availablefrom: this.availablefrom,
@@ -293,12 +294,10 @@
                 })
                     .then(function (response) {
                         console.log(response);
-                        alert(datasavesucccesfully);
-                        location.reload();
                     })
                     .catch(function (error) {
                         console.log(error);
-                    })
+                    });
                 location.reload();
 
             },
@@ -308,15 +307,23 @@
 
 
             },
-            chagePhote(event){
+            onImageChange(event){
                 let file = event.target.files[0];
-                let reader = new FileReader();
-                reader.onload = event => {
 
-                    this.image = event.target.result
-                };
+                if(file.size>1048576){
 
-                reader.readAsDataURL(file);
+                }
+                else{
+                    let vm = this;
+                    let reader = new FileReader();
+                    reader.onload = event => {
+
+                        vm.image =event.target.result
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+
 
             }
         }

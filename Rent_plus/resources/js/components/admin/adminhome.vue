@@ -91,15 +91,13 @@
                 <div class="row shadow-sm">
                     <div class="col-lg-6 col-sm-6 pt-3 pb-3" v-for="postad in getallpost">
                         <div class="about_inner1 pl-5 pr-5 pt-5 pb-5" style="background:linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43));">
-                            <h4 ><i class="fas fa-home mr-3" ></i> HouseName: <a href="">{{postad.Housename}}</a></h4>
-                            <p ><i class="fas fa-user-tie"></i> HouseOwner: <a href="">{{postad.RenterUsername}}</a></p>
-                            <p ><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
+                            <img :src="postadImg(postad.image_name)" style="height: 300px; width: 400px;">
+                            <p class="mt-5"><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
                             <p ><i class="fas fa-check-circle"></i> Type: {{postad.type_rent}}</p>
                             <p ><i class="fas fa-check-circle"></i> budget: {{postad.budget_rent}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Area: {{postad.Areaselect}}</p>
-                            <p ><i class="fas fa-check-circle"></i> City: {{postad.Cityselect}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Division: {{postad.Divisionselect}}</p>
-                            <p ><i class="fas fa-user-tie"></i> Phone number: {{postad.phonenumber}}</p>
+                            <p ><i class="fas fa-check-circle"></i> Location:{{postad.Areaselect}},{{postad.Cityselect}}, {{postad.Divisionselect}}</p>
+                            <p ><i class="fas fa-check-circle"></i> Upload: {{postad.created_at}}</p>
+
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
                                 <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
@@ -140,16 +138,14 @@
 
 
                     <div class="col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad" v-for="postad in getallpost">
+
                         <div class="about_inner1 pl-5 pr-5 pt-5 pb-5">
-                            <h4 ><i class="fas fa-home mr-3" ></i> HouseName: <a href="">{{postad.Housename}}</a></h4>
-                            <p ><i class="fas fa-user-tie"></i> HouseOwner: <a href="">{{postad.RenterUsername}}</a></p>
-                            <p ><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
+                            <img :src="postadImg(postad.image_name)" style="height: 200px; width: 200px; position: center">
+                            <p class="mt-5"><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
                             <p ><i class="fas fa-check-circle"></i> Type: {{postad.type_rent}}</p>
                             <p ><i class="fas fa-check-circle"></i> budget: {{postad.budget_rent}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Area: {{postad.Areaselect}}</p>
-                            <p ><i class="fas fa-check-circle"></i> City: {{postad.Cityselect}}</p>
-                            <p ><i class="fas fa-check-circle"></i> Division: {{postad.Divisionselect}}</p>
-                            <p ><i class="fas fa-user-tie"></i> Phone number: {{postad.phonenumber}}</p>
+                            <p ><i class="fas fa-check-circle"></i> Location:{{postad.Areaselect}},{{postad.Cityselect}}, {{postad.Divisionselect}}</p>
+
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
                                 <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
@@ -235,6 +231,9 @@
 
         },
         methods:{
+            postadImg(img){
+                return "uploadimage/"+img;
+            }
 
         }
 
