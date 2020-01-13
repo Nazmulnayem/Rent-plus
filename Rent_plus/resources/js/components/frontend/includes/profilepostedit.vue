@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-8 bg-white form_class shadow-lg">
                     <div class="text-center mt-4">
-                        <h1 >Post A Rent </h1>
+                        <h1 >Post A Rent {{this.$route.params.id}}</h1>
 
 
                     </div>
@@ -20,7 +20,7 @@
                                         <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
                                     </div>
                                     <p></p>
-                                    <input type="text" @input="setName($event.target.value)" class="form-control" placeholder="Renter Username" v-model="RenterUsername" @click="Rent =! Rent">
+                                    <input type="text" @input="setName($event.target.value)" class="form-control" placeholder="Renter Username" v-model="{{}}" @click="Rent =! Rent">
 
                                 </div>
                             </div>
@@ -208,10 +208,10 @@
 
 
                                 </label>
-                                       <div>
-                                           <input type="file" @change="onImageChange" class="form-control">
+                                <div>
+                                    <input type="file" @change="onImageChange" class="form-control">
 
-                                       </div>
+                                </div>
 
 
                                 <img :src="image" alt="">
@@ -241,7 +241,7 @@
     export default {
         data: function () {
             return {
-                post:[],
+                posts:[],
                 RenterUsername: '',
                 Housename: '',
                 phonenumber: '',
@@ -271,6 +271,19 @@
                 required,
                 minLength: minLength(4)
             }
+
+        },
+        created(){
+            var vm = this;
+            axios.get(`/profile/profile-edit/${this.$route.params.id}`)
+                .then(function (response) {
+                    vm.posts = response.data.postads;
+                   console.log(vm.posts)
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
 
         },
         methods: {
@@ -332,7 +345,5 @@
 </script>
 
 <style scoped>
-    #rent{
-        color:#1e7e34;
-    }
+
 </style>

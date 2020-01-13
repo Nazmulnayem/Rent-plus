@@ -144,6 +144,7 @@
                             <p class="mt-5"><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
                             <p ><i class="fas fa-check-circle"></i> Type: {{postad.type_rent}}</p>
                             <p ><i class="fas fa-check-circle"></i> budget: {{postad.budget_rent}}</p>
+                            <p ><i class="fas fa-check-circle"></i> Rent-From: {{postad.availablefrom}}</p>
                             <p ><i class="fas fa-check-circle"></i> Location:{{postad.Areaselect}},{{postad.Cityselect}}, {{postad.Divisionselect}}</p>
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>

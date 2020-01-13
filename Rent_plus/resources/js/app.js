@@ -49,7 +49,7 @@ Vue.component('home-component', require('./components/admin/adminmaster').defaul
 
 const router = new VueRouter({
     routes,
-    mode:'history'
+
 })
 
 const app = new Vue({

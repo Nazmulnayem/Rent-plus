@@ -24,7 +24,7 @@
 <nav class="navbar navbar-expand-lg navbar-light head_menu shadow-lg" id="header">
 
         <div class="container clearfix ">
-            <router-link class="navbar-brand " to="/home"><img src="/frontend/image/rp.PNG" alt=""></router-link>
+            <router-link class="navbar-brand " to="/"><img src="/frontend/image/rp.PNG" alt=""></router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" >
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="mynav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <router-link to="/home"><a class="nav-link"><i class="fas fa-home"></i></a></router-link>
+                        <router-link to="/"><a class="nav-link"><i class="fas fa-home"></i></a></router-link>
                     </li>
 
                     <li class="nav-item">
@@ -43,13 +43,13 @@
                         <router-link to="/profile"> <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/profile/{{ Auth::user()->name}}"><a class="nav-link" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fas fa-user-circle"></i></a></router-link>
+                        <router-link :to="`profile/{{Auth::user()->name}}`"><a class="nav-link" title="Profile"><i class="fas fa-user-circle"></i></a></router-link>
                     </li>
                     <li class="nav-item postad_item">
                         <router-link to="/postad"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>
                     </li>
                     <li class="nav-item ">
-                        <router-link to="/profile"><a class="nav-link"><i class="fas fa-user-tie"></i> Hi {{ Auth::user()->name}}</a></router-link>
+                        <router-link to="/"><a class="nav-link"><i class="fas fa-user-tie"></i> Hi {{ Auth::user()->name}}</a></router-link>
                     </li>
 
                     <li class="nav-item login">

@@ -1,11 +1,14 @@
 export default{
     state:{
           postad:[],
+
     },
+
     getters:{
    getPost(state){
        return state.postad
    }
+
     },
     actions:{
         allPost(context){
@@ -17,12 +20,14 @@ export default{
 
         }
 
+
     },
     mutations:{
 
         postadall(state,data){
             return state.postad = data
         }
+
 
     }
 }

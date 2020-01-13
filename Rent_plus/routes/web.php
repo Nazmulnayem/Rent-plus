@@ -15,6 +15,9 @@ Route::get('/', 'welcomeController@welcomepage')->name('welcome');
 Route::get('/postad', 'postadController@postad')->name('');
 Route::post('/postad/save', 'postadController@postadsave')->name('');
 Route::get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan', 'postadController@postadManage');
+Route::get('/profile/{name}', 'profileController@profilepostmanage')->name('');
+Route::get('/profile/deletepost/{id}', 'profileController@profilepostdelete')->name('');
+Route::get('/profile/profile-edit/{id}', 'profileController@profilepostedit')->name('');
 
 
 
