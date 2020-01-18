@@ -22,6 +22,12 @@ import {routes} from "./routes";
 import Vuelidate from 'vuelidate';
 Vue.use(Vuelidate)
 
+import { Form, HasError, AlertError } from 'vform'
+
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+window.Form = Form;
+
 import Swal from 'sweetalert2';
 window.swal = Swal;
 const Toast = Swal.mixin({
@@ -44,6 +50,7 @@ const store = new Vuex.Store(
 )
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('home-component', require('./components/admin/adminmaster').default);
+
 
 
 

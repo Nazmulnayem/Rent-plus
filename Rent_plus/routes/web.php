@@ -18,6 +18,7 @@ Route::get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan', 'postadControll
 Route::get('/profile/{name}', 'profileController@profilepostmanage')->name('');
 Route::get('/profile/deletepost/{id}', 'profileController@profilepostdelete')->name('');
 Route::get('/profile/profile-edit/{id}', 'profileController@profilepostedit')->name('');
+Route::post('/update/{id}', 'profileController@profilepostupdate')->name('');
 
 
 

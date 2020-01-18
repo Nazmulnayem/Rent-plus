@@ -24,11 +24,11 @@ class postadController extends Controller
 
 
         ]);
-        $strpos = strpos($request->image,';');
-        $sub = substr($request->image,0,$strpos);
+        $strpos = strpos($request->image_name,';');
+        $sub = substr($request->image_name,0,$strpos);
         $ex = explode('/',$sub)[1];
         $name = time().".".$ex;
-        $img = Image::make($request->image)->resize(200, 200);
+        $img = Image::make($request->image_name)->resize(200, 200);
         $upload_path = public_path()."/uploadimage/";
         $img->save($upload_path.$name);
 

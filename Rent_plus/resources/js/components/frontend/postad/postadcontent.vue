@@ -214,7 +214,7 @@
                                        </div>
 
 
-                                <img :src="image" alt="">
+                                <img :src="image_name" alt="">
                             </div>
 
 
@@ -261,7 +261,7 @@
                 About_rent:'',
                 phone: true,
                 Rent: true,
-                image:'',
+                image_name:'',
                 Datasave:'data save successfully',
                 submitStatus:null
             }
@@ -290,7 +290,7 @@
                     Areaselect: this.Areaselect,
                     full_address: this.full_address,
                     About_rent: this.About_rent,
-                    image:this.image
+                    image_name:this.image_name
                 })
                     .then(function (response) {
                         console.log(response);
@@ -301,12 +301,7 @@
                 location.reload();
 
             },
-            setRenterUsername(value) {
-                this.RenterUsername = value
-                this.$v.RenterUsername.$touch()
 
-
-            },
             onImageChange(event){
                 let file = event.target.files[0];
 
@@ -318,7 +313,7 @@
                     let reader = new FileReader();
                     reader.onload = event => {
 
-                        vm.image =event.target.result
+                        vm.image_name =event.target.result
                     };
 
                     reader.readAsDataURL(file);

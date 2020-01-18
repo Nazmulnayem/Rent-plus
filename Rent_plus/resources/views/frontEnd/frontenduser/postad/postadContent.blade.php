@@ -8,7 +8,7 @@
 
 <div id="app">
 
-    <postad-component></postad-component>
+
 </div>
 
 
