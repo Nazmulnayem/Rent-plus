@@ -24,7 +24,8 @@
                             <p ><i class="fas fa-check-circle"></i> budget: {{postad.budget_rent}}</p>
                             <p ><i class="fas fa-check-circle"></i> Rent-From: {{postad.availablefrom}}</p>
                             <p ><i class="fas fa-check-circle"></i> Location:{{postad.Areaselect}},{{postad.Cityselect}}, {{postad.Divisionselect}}</p>
-
+                            <p ><i class="fas fa-check-circle"></i> Update-at: {{postad.updated_at}}</p>
+                            <p ><i class="fas fa-check-circle"></i> Created-at: {{postad.created_at}}</p>
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
                               <router-link :to="`/profile/profile-edit/${postad.id}`"><a  class="mr-5" role="button" title="Update" style="font-size: 26px;"><i class="fas fa-edit"></i></a></router-link>

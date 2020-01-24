@@ -5,14 +5,14 @@ export default{
     },
 
     getters:{
-   getPost(state){
-       return state.postad
-   }
+          getPost(state){
+          return state.postad
+     }
 
     },
     actions:{
         allPost(context){
-            axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan')
+            axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan/')
                 .then(function (response) {
                     context.commit('postadall',response.data.postads)
                 })
@@ -27,7 +27,6 @@ export default{
         postadall(state,data){
             return state.postad = data
         }
-
 
     }
 }

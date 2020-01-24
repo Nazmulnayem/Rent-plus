@@ -2065,19 +2065,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      posts: [],
       divisions: ['Division', 'Dhaka', 'Chottogram', 'Sylet', 'Barishal', 'Rajshahi', 'Khulna', 'Rangpur'],
-      dhakacitys: ['City', 'Dhaka', 'manikgong', 'keranigonj', 'kishorgonj', 'shavar', 'narayongonj'],
-      dhakaareas: ['Area', 'Abdullahpur', 'biharicamp', 'Mohakhali', 'gulshan', 'banani', 'dhanmondi'],
+      dhakacitys: ['City', 'Dhaka', 'Ghazipur', 'Kishoreganj', 'Manikganj', 'Munshiganj', 'Narayanganj', 'Narsingdi', 'Tangail', 'Faridpur', 'Gopalganj', 'Madaripur', 'Rajbari', 'Shariatpur'],
+      dhakaareas: ['Area', 'Mirpur', 'Mohammadpur', 'Sher-e-Bangla Nagar', 'Pallabi', 'Adabor', 'Kafrul', 'Dhaka Cantonment', 'Tejgaon', 'Tejgaon Industrial Area', 'Gulshan', 'Rampura', 'Banani', 'Bimanbandar', 'Khilkhet', 'Vatara', 'Badda', 'Uttara', 'Uttar Khan', 'Hatirjheel', 'Paltan', 'Motijheel', 'Jatrabari', 'Kotwali', 'Sutrapur', 'Bangsal', 'Wari', 'Ramna', 'Gendaria', 'Chowkbazar', 'Lalbagh', 'Hazaribagh', 'Dhanmondi', 'Kalabagan', 'Shahbagh', 'New Market', 'Khilgaon', 'Sabujbagh', 'Demra', 'Shyampur', 'Kamrangirchar'],
       selectDivision: 'Division',
       selectCity: 'City',
       selectArea: 'Area',
-      types: ['Type', 'Family', 'Bachelor', 'Sub-let-family', 'sub-let-bechelor', 'sub-let-jobholder', 'sub-let-female'],
+      types: ['Type', 'Family', 'Bachelor', 'Sub-let-family', 'sub-let-bechelor', 'sub-let-jobholder(Male)', 'sub-let-jobholder(Female)', 'sub-let-female', 'sub-let(husband-wife)', 'hostel-room', 'hostel-seat'],
       type_rent: 'Type',
       budgets: ['Budget', 'Confirm after discussion'],
-      budget_rent: 'Budget'
+      budget_rent: 'Budget',
+      Post_where: ['Top-Rent'],
+      search: false
     };
   },
   name: "adminhome",
@@ -2092,6 +2127,23 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     postadImg: function postadImg(img) {
       return "uploadimage/" + img;
+    },
+    searchPost: function searchPost() {
+      var _this = this;
+
+      axios.get('/postad/search', {
+        params: {
+          selectDivision: this.selectDivision,
+          selectCity: this.selectCity,
+          selectArea: this.selectArea,
+          type_rent: this.type_rent
+        }
+      }).then(function (response) {
+        console.log(response.data.postads);
+        _this.posts = response.data.postads;
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   }
 });
@@ -2128,6 +2180,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2536,6 +2589,97 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadSearch.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/frontend/postad/postadSearch.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "postadSearch",
+  data: function data() {
+    return {
+      form: new Form({
+        RenterUsername: '',
+        Housename: '',
+        availablefrom: '',
+        phonenumber: '',
+        availablefloor: '',
+        type_rent: '',
+        budget_rent: '',
+        Divisionselect: '',
+        Cityselect: '',
+        Areaselect: '',
+        full_address: '',
+        About_rent: '',
+        image_name: ''
+      })
+    };
+  },
+  mounted: function mounted() {
+    this.$store.dispatch("searchallPost");
+  },
+  computed: {
+    Searchallpost: function Searchallpost() {
+      return this.$store.getters.searchPost;
+    }
+  },
+  methods: {
+    postadImg: function postadImg(img) {
+      return "uploadimage/" + img;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadcontent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/frontend/postad/postadcontent.vue?vue&type=script&lang=js& ***!
@@ -2547,6 +2691,30 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2803,13 +2971,15 @@ __webpack_require__.r(__webpack_exports__);
       Cityselect: 'City',
       Areaselect: 'Area',
       divisions: ['Division', 'Dhaka', 'Chottogram', 'Sylet', 'Barishal', 'Rajshahi', 'Khulna', 'Rangpur'],
-      dhakacitys: ['City', 'Dhaka', 'manikgong', 'keranigonj', 'kishorgonj', 'shavar', 'narayongonj'],
-      dhakaareas: ['Area', 'Abdullahpur', 'biharicamp', 'Mohakhali', 'gulshan', 'banani', 'dhanmondi'],
+      dhakacitys: ['City', 'Dhaka', 'Ghazipur', 'Kishoreganj', 'Manikganj', 'Munshiganj', 'Narayanganj', 'Narsingdi', 'Tangail', 'Faridpur', 'Gopalganj', 'Madaripur', 'Rajbari', 'Shariatpur'],
+      dhakaareas: ['Area', 'Mirpur', 'Mohammadpur', 'Sher-e-Bangla Nagar', 'Pallabi', 'Adabor', 'Kafrul', 'Dhaka Cantonment', 'Tejgaon', 'Tejgaon Industrial Area', 'Gulshan', 'Rampura', 'Banani', 'Bimanbandar', 'Khilkhet', 'Vatara', 'Badda', 'Uttara', 'Uttar Khan', 'Hatirjheel', 'Paltan', 'Motijheel', 'Jatrabari', 'Kotwali', 'Sutrapur', 'Bangsal', 'Wari', 'Ramna', 'Gendaria', 'Chowkbazar', 'Lalbagh', 'Hazaribagh', 'Dhanmondi', 'Kalabagan', 'Shahbagh', 'New Market', 'Khilgaon', 'Sabujbagh', 'Demra', 'Shyampur', 'Kamrangirchar'],
       full_address: '',
       About_rent: '',
       phone: true,
       Rent: true,
       image_name: '',
+      user_types: ['Top-Rents', 'All-Rents'],
+      user_type: 'All-Rents',
       Datasave: 'data save successfully',
       submitStatus: null
     };
@@ -2835,6 +3005,7 @@ __webpack_require__.r(__webpack_exports__);
         Areaselect: this.Areaselect,
         full_address: this.full_address,
         About_rent: this.About_rent,
+        user_type: this.user_type,
         image_name: this.image_name
       }).then(function (response) {
         console.log(response);
@@ -2857,6 +3028,101 @@ __webpack_require__.r(__webpack_exports__);
         reader.readAsDataURL(file);
       }
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadetails.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/frontend/postad/postadetails.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: new Form({
+        RenterUsername: '',
+        Housename: '',
+        availablefrom: '',
+        phonenumber: '',
+        availablefloor: '',
+        type_rent: '',
+        budget_rent: '',
+        Divisionselect: '',
+        Cityselect: '',
+        Areaselect: '',
+        full_address: '',
+        About_rent: '',
+        image_name: ''
+      })
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get("/postadetails/".concat(this.$route.params.id)).then(function (response) {
+      console.log(response.data.postads);
+
+      _this.form.fill(response.data.postads);
+    });
   }
 });
 
@@ -43190,7 +43456,31 @@ var render = function() {
                                 ]
                               ),
                               _vm._v(" "),
-                              _vm._m(5)
+                              _c(
+                                "div",
+                                { staticClass: "form-group btn_search" },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-primary mt-3",
+                                      attrs: { type: "submit" },
+                                      on: {
+                                        click: [
+                                          function($event) {
+                                            $event.preventDefault()
+                                            return _vm.searchPost($event)
+                                          },
+                                          function($event) {
+                                            _vm.search = !_vm.search
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    [_vm._v("Search")]
+                                  )
+                                ]
+                              )
                             ]
                           )
                         ]
@@ -43205,74 +43495,210 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
+    _vm.search
+      ? _c(
+          "section",
+          { staticClass: "about_part", attrs: { id: "serachresult" } },
+          [
+            _c("div", { staticClass: "container" }, [
+              _vm._m(5),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row shadow-sm" },
+                _vm._l(_vm.posts, function(postad) {
+                  return _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-sm-6 pt-3 pb-3" },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5",
+                          staticStyle: {
+                            background:
+                              "linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43))"
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticStyle: { height: "300px", width: "400px" },
+                            attrs: { src: _vm.postadImg(postad.image_name) }
+                          }),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "mt-5" }, [
+                            _c("i", { staticClass: "fas fa-user-tie" }),
+                            _vm._v(
+                              " Avaiable floor: " +
+                                _vm._s(postad.availablefloor)
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("i", { staticClass: "fas fa-check-circle" }),
+                            _vm._v(" Type: " + _vm._s(postad.type_rent))
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("i", { staticClass: "fas fa-check-circle" }),
+                            _vm._v(" budget: " + _vm._s(postad.budget_rent))
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("i", { staticClass: "fas fa-check-circle" }),
+                            _vm._v(
+                              " Location:" +
+                                _vm._s(postad.Areaselect) +
+                                "," +
+                                _vm._s(postad.Cityselect) +
+                                ", " +
+                                _vm._s(postad.Divisionselect)
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("i", { staticClass: "fas fa-check-circle" }),
+                            _vm._v(" Upload: " + _vm._s(postad.created_at))
+                          ]),
+                          _vm._v(" "),
+                          _vm._m(6, true),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {},
+                            [
+                              _vm._m(7, true),
+                              _vm._v(" "),
+                              _vm._m(8, true),
+                              _vm._v(" "),
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/postadetails/" + postad.id } },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "mr-5",
+                                      staticStyle: { "font-size": "26px" },
+                                      attrs: {
+                                        role: "button",
+                                        title: "Details"
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fas fa-eye" })]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ])
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
     _c("section", { staticClass: "about_part", attrs: { id: "Toprents" } }, [
       _c("div", { staticClass: "container" }, [
-        _vm._m(6),
+        _vm._m(9),
         _vm._v(" "),
         _c(
           "div",
           { staticClass: "row shadow-sm" },
           _vm._l(_vm.getallpost, function(postad) {
-            return _c("div", { staticClass: "col-lg-6 col-sm-6 pt-3 pb-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5",
-                  staticStyle: {
-                    background:
-                      "linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43))"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticStyle: { height: "300px", width: "400px" },
-                    attrs: { src: _vm.postadImg(postad.image_name) }
-                  }),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "mt-5" }, [
-                    _c("i", { staticClass: "fas fa-user-tie" }),
-                    _vm._v(" Avaiable floor: " + _vm._s(postad.availablefloor))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("i", { staticClass: "fas fa-check-circle" }),
-                    _vm._v(" Type: " + _vm._s(postad.type_rent))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("i", { staticClass: "fas fa-check-circle" }),
-                    _vm._v(" budget: " + _vm._s(postad.budget_rent))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("i", { staticClass: "fas fa-check-circle" }),
-                    _vm._v(
-                      " Location:" +
-                        _vm._s(postad.Areaselect) +
-                        "," +
-                        _vm._s(postad.Cityselect) +
-                        ", " +
-                        _vm._s(postad.Divisionselect)
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("i", { staticClass: "fas fa-check-circle" }),
-                    _vm._v(" Upload: " + _vm._s(postad.created_at))
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(7, true),
-                  _vm._v(" "),
-                  _vm._m(8, true)
-                ]
-              )
-            ])
+            return postad.user_type == "Top-Rents"
+              ? _c("div", { staticClass: "col-lg-6 col-sm-6 pt-3 pb-3" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5",
+                      staticStyle: {
+                        background:
+                          "linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43))"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticStyle: { height: "300px", width: "400px" },
+                        attrs: { src: _vm.postadImg(postad.image_name) }
+                      }),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mt-5" }, [
+                        _c("i", { staticClass: "fas fa-user-tie" }),
+                        _vm._v(
+                          " Avaiable floor: " + _vm._s(postad.availablefloor)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-check-circle" }),
+                        _vm._v(" Type: " + _vm._s(postad.type_rent))
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-check-circle" }),
+                        _vm._v(" budget: " + _vm._s(postad.budget_rent))
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-check-circle" }),
+                        _vm._v(
+                          " Location:" +
+                            _vm._s(postad.Areaselect) +
+                            "," +
+                            _vm._s(postad.Cityselect) +
+                            ", " +
+                            _vm._s(postad.Divisionselect)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-check-circle" }),
+                        _vm._v(" Upload: " + _vm._s(postad.created_at))
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(10, true),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {},
+                        [
+                          _vm._m(11, true),
+                          _vm._v(" "),
+                          _vm._m(12, true),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/postadetails/" + postad.id } },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "mr-5",
+                                  staticStyle: { "font-size": "26px" },
+                                  attrs: { role: "button", title: "Details" }
+                                },
+                                [_c("i", { staticClass: "fas fa-eye" })]
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ]
+                  )
+                ])
+              : _vm._e()
           }),
           0
         )
-      ]),
-      _vm._v(" "),
-      _vm._m(9)
+      ])
     ]),
     _vm._v(" "),
     _c(
@@ -43280,71 +43706,78 @@ var render = function() {
       { staticClass: "All_rents position-relative", attrs: { id: "Allrents" } },
       [
         _c("div", { staticClass: "container pb-5" }, [
-          _vm._m(10),
+          _vm._m(13),
           _vm._v(" "),
           _c(
             "div",
             { staticClass: "row shadow-sm" },
             [
               _vm._l(_vm.getallpost, function(postad) {
-                return _c(
-                  "div",
-                  { staticClass: "col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad" },
-                  [
-                    _c(
+                return postad.user_type == "All-Rents"
+                  ? _c(
                       "div",
-                      { staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5" },
+                      {
+                        staticClass: "col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad"
+                      },
                       [
-                        _c("img", {
-                          staticStyle: {
-                            height: "200px",
-                            width: "200px",
-                            position: "center"
-                          },
-                          attrs: { src: _vm.postadImg(postad.image_name) }
-                        }),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "mt-5" }, [
-                          _c("i", { staticClass: "fas fa-user-tie" }),
-                          _vm._v(
-                            " Avaiable floor: " + _vm._s(postad.availablefloor)
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-check-circle" }),
-                          _vm._v(" Type: " + _vm._s(postad.type_rent))
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-check-circle" }),
-                          _vm._v(" budget: " + _vm._s(postad.budget_rent))
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-check-circle" }),
-                          _vm._v(" Rent-From: " + _vm._s(postad.availablefrom))
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-check-circle" }),
-                          _vm._v(
-                            " Location:" +
-                              _vm._s(postad.Areaselect) +
-                              "," +
-                              _vm._s(postad.Cityselect) +
-                              ", " +
-                              _vm._s(postad.Divisionselect)
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _vm._m(11, true),
-                        _vm._v(" "),
-                        _vm._m(12, true)
+                        _c(
+                          "div",
+                          { staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5" },
+                          [
+                            _c("img", {
+                              staticStyle: {
+                                height: "200px",
+                                width: "200px",
+                                position: "center"
+                              },
+                              attrs: { src: _vm.postadImg(postad.image_name) }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "mt-5" }, [
+                              _c("i", { staticClass: "fas fa-user-tie" }),
+                              _vm._v(
+                                " Avaiable floor: " +
+                                  _vm._s(postad.availablefloor)
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _c("i", { staticClass: "fas fa-check-circle" }),
+                              _vm._v(" Type: " + _vm._s(postad.type_rent))
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _c("i", { staticClass: "fas fa-check-circle" }),
+                              _vm._v(" budget: " + _vm._s(postad.budget_rent))
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _c("i", { staticClass: "fas fa-check-circle" }),
+                              _vm._v(
+                                " Rent-From: " + _vm._s(postad.availablefrom)
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _c("i", { staticClass: "fas fa-check-circle" }),
+                              _vm._v(
+                                " Location:" +
+                                  _vm._s(postad.Areaselect) +
+                                  "," +
+                                  _vm._s(postad.Cityselect) +
+                                  ", " +
+                                  _vm._s(postad.Divisionselect)
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _vm._m(14, true),
+                            _vm._v(" "),
+                            _vm._m(15, true)
+                          ]
+                        )
                       ]
                     )
-                  ]
-                )
+                  : _vm._e()
               }),
               _vm._v(" "),
               _c("nav", { attrs: { "aria-label": "..." } })
@@ -43352,12 +43785,12 @@ var render = function() {
             2
           ),
           _vm._v(" "),
-          _vm._m(13)
+          _vm._m(16)
         ])
       ]
     ),
     _vm._v(" "),
-    _vm._m(14)
+    _vm._m(17)
   ])
 }
 var staticRenderFns = [
@@ -43462,25 +43895,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group btn_search" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-primary mt-3", attrs: { type: "submit" } },
-        [_vm._v("Search")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c(
       "div",
       { staticClass: "row justify-content-center text-center" },
       [
         _c("div", { staticClass: "col-lg-10 " }, [
-          _c("div", { staticClass: "section_head pb-5 mb-5 shadow-sm" }, [
-            _c("h2", [_vm._v("Top Rents")])
+          _c("div", { staticClass: "section_head pb-5 mb-5" }, [
+            _c("h2", { staticClass: "shadow-lg" }, [_vm._v("Search Result")])
           ])
         ])
       ]
@@ -43499,36 +43920,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", {}, [
-      _c(
-        "a",
-        {
-          staticClass: "mr-5",
-          staticStyle: { "font-size": "26px" },
-          attrs: { href: "", role: "button", title: "Send A  Rent Request" }
-        },
-        [_c("i", { staticClass: "fa fa-user" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "mr-5",
-          staticStyle: { "font-size": "26px" },
-          attrs: { href: "", role: "button", title: "Send Message" }
-        },
-        [_c("i", { staticClass: "far fa-comments" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticStyle: { "font-size": "26px" },
-          attrs: { href: "", role: "button", title: "See Details" }
-        },
-        [_c("i", { staticClass: "fa fa-reply" })]
-      )
-    ])
+    return _c(
+      "a",
+      {
+        staticClass: "mr-5",
+        staticStyle: { "font-size": "26px" },
+        attrs: { href: "", role: "button", title: "Send A  Rent Request" }
+      },
+      [_c("i", { staticClass: "fa fa-user" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "mr-5",
+        staticStyle: { "font-size": "26px" },
+        attrs: { href: "", role: "button", title: "Send Message" }
+      },
+      [_c("i", { staticClass: "far fa-comments" })]
+    )
   },
   function() {
     var _vm = this
@@ -43539,14 +43953,48 @@ var staticRenderFns = [
       { staticClass: "row justify-content-center text-center" },
       [
         _c("div", { staticClass: "col-lg-10 " }, [
-          _c("div", { staticClass: "section_head2 pt-3" }, [
-            _c("a", { attrs: { href: "" } }, [
-              _vm._v("See More "),
-              _c("i", { staticClass: "fas fa-external-link-square-alt" })
-            ])
+          _c("div", { staticClass: "section_head pb-5 mb-5" }, [
+            _c("h2", { staticClass: "shadow-lg" }, [_vm._v("Top Rents")])
           ])
         ])
       ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("i", { staticClass: "fas fa-check-circle" }),
+      _vm._v(" click here for details")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "mr-5",
+        staticStyle: { "font-size": "26px" },
+        attrs: { href: "", role: "button", title: "Send A  Rent Request" }
+      },
+      [_c("i", { staticClass: "fa fa-user" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "mr-5",
+        staticStyle: { "font-size": "26px" },
+        attrs: { href: "", role: "button", title: "Send Message" }
+      },
+      [_c("i", { staticClass: "far fa-comments" })]
     )
   },
   function() {
@@ -43618,12 +44066,7 @@ var staticRenderFns = [
       { staticClass: "row justify-content-center text-center" },
       [
         _c("div", { staticClass: "col-lg-10 " }, [
-          _c("div", { staticClass: "section_head2 pt-3" }, [
-            _c("a", { attrs: { href: "" } }, [
-              _vm._v("See More "),
-              _c("i", { staticClass: "fas fa-external-link-square-alt" })
-            ])
-          ])
+          _c("div", { staticClass: "section_head2 pt-3" })
         ])
       ]
     )
@@ -43769,6 +44212,16 @@ var render = function() {
                               ", " +
                               _vm._s(postad.Divisionselect)
                           )
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _c("i", { staticClass: "fas fa-check-circle" }),
+                          _vm._v(" Update-at: " + _vm._s(postad.updated_at))
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _c("i", { staticClass: "fas fa-check-circle" }),
+                          _vm._v(" Created-at: " + _vm._s(postad.created_at))
                         ]),
                         _vm._v(" "),
                         _vm._m(1, true),
@@ -44603,6 +45056,177 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadSearch.vue?vue&type=template&id=0bc31936&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/frontend/postad/postadSearch.vue?vue&type=template&id=0bc31936&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("section", { staticClass: "about_part", attrs: { id: "Toprents" } }, [
+      _c("div", { staticClass: "container" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row shadow-sm" },
+          _vm._l(_vm.Searchallpost, function(postad) {
+            return _c("div", { staticClass: "col-lg-6 col-sm-6 pt-3 pb-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5",
+                  staticStyle: {
+                    background:
+                      "linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43))"
+                  }
+                },
+                [
+                  _c("img", {
+                    staticStyle: { height: "300px", width: "400px" },
+                    attrs: { src: _vm.postadImg(postad.image_name) }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mt-5" }, [
+                    _c("i", { staticClass: "fas fa-user-tie" }),
+                    _vm._v(" Avaiable floor: " + _vm._s(postad.availablefloor))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("i", { staticClass: "fas fa-check-circle" }),
+                    _vm._v(" Type: " + _vm._s(postad.type_rent))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("i", { staticClass: "fas fa-check-circle" }),
+                    _vm._v(" budget: " + _vm._s(postad.budget_rent))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("i", { staticClass: "fas fa-check-circle" }),
+                    _vm._v(
+                      " Location:" +
+                        _vm._s(postad.Areaselect) +
+                        "," +
+                        _vm._s(postad.Cityselect) +
+                        ", " +
+                        _vm._s(postad.Divisionselect)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("i", { staticClass: "fas fa-check-circle" }),
+                    _vm._v(" Upload: " + _vm._s(postad.created_at))
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1, true),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {},
+                    [
+                      _vm._m(2, true),
+                      _vm._v(" "),
+                      _vm._m(3, true),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/postadetails/" + postad.id } },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "mr-5",
+                              staticStyle: { "font-size": "26px" },
+                              attrs: { role: "button", title: "Details" }
+                            },
+                            [_c("i", { staticClass: "fas fa-eye" })]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            ])
+          }),
+          0
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row justify-content-center text-center" },
+      [
+        _c("div", { staticClass: "col-lg-10 " }, [
+          _c("div", { staticClass: "section_head pb-5 mb-5" }, [
+            _c("h2", { staticClass: "shadow-lg" }, [_vm._v("Top Rents")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("i", { staticClass: "fas fa-check-circle" }),
+      _vm._v(" click here for details")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "mr-5",
+        staticStyle: { "font-size": "26px" },
+        attrs: { href: "", role: "button", title: "Send A  Rent Request" }
+      },
+      [_c("i", { staticClass: "fa fa-user" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "mr-5",
+        staticStyle: { "font-size": "26px" },
+        attrs: { href: "", role: "button", title: "Send Message" }
+      },
+      [_c("i", { staticClass: "far fa-comments" })]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadcontent.vue?vue&type=template&id=1c4e5fa8&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/frontend/postad/postadcontent.vue?vue&type=template&id=1c4e5fa8&scoped=true& ***!
@@ -45142,7 +45766,61 @@ var render = function() {
                 _c("div", { staticClass: "col-lg-10 mt-3" }, [
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
-                  _c("div", [
+                  _c("div", { staticClass: "input-group" }, [
+                    _vm._m(13),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.user_type,
+                            expression: "user_type"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.user_type = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
+                        }
+                      },
+                      _vm._l(_vm.user_types, function(user_type) {
+                        return _c("option", [_vm._v(_vm._s(user_type))])
+                      }),
+                      0
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm.user_type == "Top-Rents"
+                    ? _c("div", [
+                        _c("button", { staticClass: "form-control" }, [
+                          _vm._v(
+                            "Sir Pay only 21taka for " + _vm._s(_vm.user_type)
+                          )
+                        ])
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-10 mt-3" }, [
+                  _c("label", { staticClass: "sr-only" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "input-group" }, [
+                    _vm._m(14),
+                    _vm._v(" "),
                     _c("input", {
                       staticClass: "form-control",
                       attrs: { type: "file" },
@@ -45306,6 +45984,112 @@ var staticRenderFns = [
         _c("i", { staticClass: "fa fa-home" })
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text text-center" }, [
+        _c("i", { staticClass: "fa fa-money-check" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text text-center" }, [
+        _c("i", { staticClass: "fa fa-camera" })
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadetails.vue?vue&type=template&id=0b29737b&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/frontend/postad/postadetails.vue?vue&type=template&id=0b29737b&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "section",
+      { staticClass: "All_rents position-relative", attrs: { id: "Allrents" } },
+      [
+        _c("div", { staticClass: "container pb-5" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "row shadow-sm" }, [
+            _c(
+              "div",
+              { staticClass: "col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad" },
+              [
+                _c("div", { staticClass: "about_inner1 pl-5 pr-5 pt-5 pb-5" }, [
+                  _c("p", { staticClass: "mt-5" }, [
+                    _c("i", { staticClass: "fas fa-user-tie" }),
+                    _vm._v(
+                      " Avaiable floor: " + _vm._s(_vm.form.availablefloor)
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("nav", { attrs: { "aria-label": "..." } })
+          ]),
+          _vm._v(" "),
+          _vm._m(1)
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row justify-content-center text-center" },
+      [
+        _c("div", { staticClass: "col-lg-10" }, [
+          _c("div", { staticClass: "section_head1 pb-5 mb-5" }, [
+            _c("h2", { staticClass: "shadow-lg" }, [_vm._v("Post Details")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row justify-content-center text-center" },
+      [
+        _c("div", { staticClass: "col-lg-10 " }, [
+          _c("div", { staticClass: "section_head2 pt-3" })
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -63811,6 +64595,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/frontend/postad/postadSearch.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/frontend/postad/postadSearch.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _postadSearch_vue_vue_type_template_id_0bc31936_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./postadSearch.vue?vue&type=template&id=0bc31936&scoped=true& */ "./resources/js/components/frontend/postad/postadSearch.vue?vue&type=template&id=0bc31936&scoped=true&");
+/* harmony import */ var _postadSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./postadSearch.vue?vue&type=script&lang=js& */ "./resources/js/components/frontend/postad/postadSearch.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _postadSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _postadSearch_vue_vue_type_template_id_0bc31936_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _postadSearch_vue_vue_type_template_id_0bc31936_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "0bc31936",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/frontend/postad/postadSearch.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/frontend/postad/postadSearch.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/frontend/postad/postadSearch.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_postadSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./postadSearch.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadSearch.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_postadSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/frontend/postad/postadSearch.vue?vue&type=template&id=0bc31936&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/frontend/postad/postadSearch.vue?vue&type=template&id=0bc31936&scoped=true& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_postadSearch_vue_vue_type_template_id_0bc31936_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./postadSearch.vue?vue&type=template&id=0bc31936&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadSearch.vue?vue&type=template&id=0bc31936&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_postadSearch_vue_vue_type_template_id_0bc31936_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_postadSearch_vue_vue_type_template_id_0bc31936_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/frontend/postad/postadcontent.vue":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/frontend/postad/postadcontent.vue ***!
@@ -63898,6 +64751,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/frontend/postad/postadetails.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/frontend/postad/postadetails.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _postadetails_vue_vue_type_template_id_0b29737b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./postadetails.vue?vue&type=template&id=0b29737b&scoped=true& */ "./resources/js/components/frontend/postad/postadetails.vue?vue&type=template&id=0b29737b&scoped=true&");
+/* harmony import */ var _postadetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./postadetails.vue?vue&type=script&lang=js& */ "./resources/js/components/frontend/postad/postadetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _postadetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _postadetails_vue_vue_type_template_id_0b29737b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _postadetails_vue_vue_type_template_id_0b29737b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "0b29737b",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/frontend/postad/postadetails.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/frontend/postad/postadetails.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/frontend/postad/postadetails.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_postadetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./postadetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_postadetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/frontend/postad/postadetails.vue?vue&type=template&id=0b29737b&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/frontend/postad/postadetails.vue?vue&type=template&id=0b29737b&scoped=true& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_postadetails_vue_vue_type_template_id_0b29737b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./postadetails.vue?vue&type=template&id=0b29737b&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/frontend/postad/postadetails.vue?vue&type=template&id=0b29737b&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_postadetails_vue_vue_type_template_id_0b29737b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_postadetails_vue_vue_type_template_id_0b29737b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes.js":
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
@@ -63912,6 +64834,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_frontend_postad_postadcontent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/frontend/postad/postadcontent */ "./resources/js/components/frontend/postad/postadcontent.vue");
 /* harmony import */ var _components_frontend_includes_profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/frontend/includes/profile */ "./resources/js/components/frontend/includes/profile.vue");
 /* harmony import */ var _components_frontend_includes_profilepostedit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/frontend/includes/profilepostedit */ "./resources/js/components/frontend/includes/profilepostedit.vue");
+/* harmony import */ var _components_frontend_postad_postadetails__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/frontend/postad/postadetails */ "./resources/js/components/frontend/postad/postadetails.vue");
+/* harmony import */ var _components_frontend_postad_postadSearch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/frontend/postad/postadSearch */ "./resources/js/components/frontend/postad/postadSearch.vue");
+
+
 
 
 
@@ -63928,6 +64854,12 @@ var routes = [{
 }, {
   path: '/postad',
   component: _components_frontend_postad_postadcontent__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  path: '/postadetails/:id',
+  component: _components_frontend_postad_postadetails__WEBPACK_IMPORTED_MODULE_4__["default"]
+}, {
+  path: '/postad/search',
+  component: _components_frontend_postad_postadSearch__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
 
 /***/ }),
@@ -63952,7 +64884,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   actions: {
     allPost: function allPost(context) {
-      axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan').then(function (response) {
+      axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan/').then(function (response) {
         context.commit('postadall', response.data.postads);
       });
     }

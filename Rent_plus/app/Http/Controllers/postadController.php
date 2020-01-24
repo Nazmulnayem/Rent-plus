@@ -46,6 +46,7 @@ class postadController extends Controller
         $postad->Areaselect = $request->Areaselect;
         $postad->full_address = $request->full_address;
         $postad->About_rent = $request->About_rent;
+        $postad->user_type = $request ->user_type;
         $postad->image_name = $name;
 
         $postad->save();
@@ -63,4 +64,31 @@ public function postadManage(){
 
 
 }
+public function postdetails($id){
+    $postads = Postad::find($id);
+    return response()->json([
+        'postads' => $postads],200);
+
+}
+
+public function postadsearch(Request $request){
+        $postads = postad::where('Divisionselect',$request->Divisionselect)
+                         ->orWhere('Cityselect',$request->Cityselect)
+                         ->orWhere('Areaselect',$request->Areaselect)
+                         ->orWhere('type_rent',$request->type_rent)
+                       ->get();
+    return response()->json([
+        'postads' => $postads],200);
+
+
+
+
+}
+public function postadsearchallpost(){
+    $postads = postad::all();
+    return response()->json([
+        'postads' => $postads],200);
+
+}
+
 }

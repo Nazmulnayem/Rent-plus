@@ -45,6 +45,7 @@ const Toast = Swal.mixin({
 
 window.toast=Toast.fire;
 
+
 const store = new Vuex.Store(
     storedata
 )
@@ -57,10 +58,12 @@ Vue.component('home-component', require('./components/admin/adminmaster').defaul
 const router = new VueRouter({
     routes,
 
+
 })
 
 const app = new Vue({
     el: '#app',
     router,
     store
+
 });

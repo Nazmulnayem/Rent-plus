@@ -124,7 +124,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-money-check"></i></div>
                                     </div>
-                                    <select class="form-control" v-model="budget_rent">
+                                    <select class="form-control" v-model="budget_rent" >
 
                                         <option v-for="budget in budgets">{{budget}}</option>
                                         <option v-for="n in 20">{{n}}k <</option>
@@ -208,14 +208,38 @@
 
 
                                 </label>
-                                       <div>
-                                           <input type="file" @change="onImageChange" class="form-control">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-money-check"></i></div>
+                                    </div>
+                                    <select class="form-control" v-model="user_type">
 
-                                       </div>
+                                        <option v-for="user_type in user_types">{{user_type}}</option>
 
 
-                                <img :src="image_name" alt="">
+                                    </select>
+                                </div>
+                                <div v-if="user_type=='Top-Rents'">
+                                    <button  class="form-control">Sir Pay only 21taka for {{user_type}}</button>
+                                </div>
                             </div>
+
+                            <div class="col-lg-10 mt-3">
+                            <label class="sr-only">
+
+
+                            </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-camera"></i></div>
+                                    </div>
+                                    <input type="file" @change="onImageChange" class="form-control">
+                                </div>
+
+
+                            <img :src="image_name" alt="">
+
+                        </div>
 
 
                             <div class="col-lg-10 mt-3">
@@ -255,13 +279,15 @@
                 Cityselect: 'City',
                 Areaselect: 'Area',
                 divisions: ['Division', 'Dhaka', 'Chottogram', 'Sylet', 'Barishal', 'Rajshahi', 'Khulna', 'Rangpur'],
-                dhakacitys: ['City', 'Dhaka', 'manikgong', 'keranigonj', 'kishorgonj', 'shavar', 'narayongonj'],
-                dhakaareas: ['Area','Abdullahpur', 'biharicamp', 'Mohakhali', 'gulshan', 'banani', 'dhanmondi'],
+                dhakacitys: ['City', 'Dhaka', 'Ghazipur', 'Kishoreganj', 'Manikganj', 'Munshiganj', 'Narayanganj','Narsingdi','Tangail','Faridpur','Gopalganj','Madaripur','Rajbari','Shariatpur'],
+                dhakaareas: ['Area', 'Mirpur', 'Mohammadpur', 'Sher-e-Bangla Nagar', 'Pallabi', 'Adabor', 'Kafrul', 'Dhaka Cantonment', 'Tejgaon', 'Tejgaon Industrial Area', 'Gulshan', 'Rampura', 'Banani', 'Bimanbandar', 'Khilkhet', 'Vatara', 'Badda', 'Uttara', 'Uttar Khan', 'Hatirjheel','Paltan', 'Motijheel', 'Jatrabari', 'Kotwali', 'Sutrapur', 'Bangsal', 'Wari', 'Ramna', 'Gendaria', 'Chowkbazar', 'Lalbagh', 'Hazaribagh', 'Dhanmondi', 'Kalabagan', 'Shahbagh', 'New Market', 'Khilgaon', 'Sabujbagh','Demra', 'Shyampur', 'Kamrangirchar'],
                 full_address:'',
                 About_rent:'',
                 phone: true,
                 Rent: true,
                 image_name:'',
+                 user_types:['Top-Rents','All-Rents'],
+                user_type:'All-Rents',
                 Datasave:'data save successfully',
                 submitStatus:null
             }
@@ -290,7 +316,9 @@
                     Areaselect: this.Areaselect,
                     full_address: this.full_address,
                     About_rent: this.About_rent,
-                    image_name:this.image_name
+                    user_type:this.user_type,
+                    image_name:this.image_name,
+
                 })
                     .then(function (response) {
                         console.log(response);

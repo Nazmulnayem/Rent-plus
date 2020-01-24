@@ -2,6 +2,8 @@ import homecomponent from './components/admin/adminhome'
 import postadcomponent from './components/frontend/postad/postadcontent'
 import profile from './components/frontend/includes/profile'
 import profilepostedit from './components/frontend/includes/profilepostedit'
+import postdetails from './components/frontend/postad/postadetails'
+import postsearch from './components/frontend/postad/postadSearch'
 export const routes = [
 
     {
@@ -20,6 +22,13 @@ export const routes = [
         path:'/postad',
         component: postadcomponent
     },
-
+    {
+        path:'/postadetails/:id',
+        component: postdetails
+    },
+    {
+        path:'/postad/search',
+        component: postsearch
+    }
 
 ]

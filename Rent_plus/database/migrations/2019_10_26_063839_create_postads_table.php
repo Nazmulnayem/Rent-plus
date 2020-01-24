@@ -27,7 +27,8 @@ class CreatePostadsTable extends Migration
             $table->string('Areaselect',200);
             $table->text('full_address');
             $table->text('About_rent');
-            $table->string('image_name',100);
+            $table->string('image_name',200);
+            $table->string('user_type',100);
 
             $table->timestamps();
         });
