@@ -157,12 +157,53 @@ h1,h2,h3,h4,h5,h6, p{
     -webkit-transition: .5s;
 }
 #banner .carousel-caption h1{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color:  #ffdf7e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    font-size: 50px;
+    color:  #FDDB27FF;
+    letter-spacing: 5px;
+}
+#banner .carousel-caption p{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    font-size: 20px;
+    color:  #FDDB27FF;
+    letter-spacing: 2px;
+}
+#banner .carousel-caption button{
+    background-color: #FDDB27FF;
+}
+#banner .carousel-caption button:hover{
+    background-color:#002752;
+    transition: 1s;
+
+
 }
 
+#banner .carousel-caption button a{
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #00B1D2FF;
+}
+/*
+text Title_ad part
+ */
+
+#Title_ad .row .postadd_h4{
+    color:#062c33;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+
+}
+#Title_ad .row .postadd_h5{
+    color:#062c33;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+
+}
 
 /* about part */
 .about_part{
@@ -299,19 +340,13 @@ h1,h2,h3,h4,h5,h6, p{
 
 }
 .post_add .jumbotron .row button{
-    background-color: #721c24;
-    border: 1px solid #721c24;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
 
-}
-.post_add .jumbotron .row button:hover{
-
-    background-color: #1d2124;
-    border: 1px solid #1d2124;
-    -webkit-transition: .5s;
 }
 .post_add .jumbotron .row button a{
     text-decoration: none;
-    color: white;
+    color: #1d2124;
 }
 .myfooter{
     background-color: #1b1e21;

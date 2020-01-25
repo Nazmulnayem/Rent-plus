@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-light head_menu shadow-lg " id="header" >
+<nav class="navbar navbar-expand-lg navbar-light head_menu shadow-sm " id="header" >
     <div class="container clearfix " >
         <a class="navbar-brand " href="{{url('/')}}"><img src="/frontend/image/rp.PNG" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" >

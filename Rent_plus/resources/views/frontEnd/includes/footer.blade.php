@@ -36,6 +36,7 @@
                     <p>Mail : <i class="far fa-envelope"></i> Rentplusbd@gmail.com</p>
                     <p>Phone : <i class="fas fa-mobile-alt"></i> 01775641072</p>
                     <p> All rights reserve &copy; Rentplus 2019</p>
+                    <p> Developed by &copy; Nazmul Hasan</p>
                     <a class="pr-3 pt-3" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="pr-3" href=""><i class="fab fa-instagram"></i></a>
                     <a class="pr-3" href=""><i class="fab fa-twitter"></i></i></a>

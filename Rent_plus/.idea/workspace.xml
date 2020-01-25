@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2e45dda-571d-4f6a-8fa5-9ff8757d1f00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/admin/adminhome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/admin/adminhome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/frontend/postad/postadetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/frontend/postad/postadetails.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/frontend/image/all.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/frontend/image/postarent.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/frontend/image/top.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploadimage/1579768702.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontEnd/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontEnd/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,18 +24,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadcontent.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="61" column="148" selection-start-line="61" selection-start-column="125" selection-end-line="61" selection-end-column="148" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/admin/adminhome.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
+            <state relative-caret-position="-165">
               <caret line="185" column="196" selection-start-line="185" selection-start-column="196" selection-end-line="185" selection-end-column="196" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -51,18 +48,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadetails.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1361">
+            <state relative-caret-position="2066">
               <caret line="157" column="19" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
             </state>
           </provider>
@@ -80,12 +68,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="611">
+              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
               <folding>
                 <element signature="e#333#394#0#HTML" expanded="true" />
-                <element signature="e#650#711#0#HTML" expanded="true" />
+                <element signature="e#1639#1673#0#HTML" expanded="true" />
+                <element signature="e#1883#1917#0#HTML" expanded="true" />
+                <element signature="e#2026#2060#0#HTML" expanded="true" />
+                <element signature="e#1299#1328#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/includes/footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="86" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -93,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/frontend/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="139" column="38" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
+            <state relative-caret-position="401">
+              <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -110,15 +128,6 @@
                 <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -151,19 +160,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/server.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontEnd/frontenduser/includes/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontEnd/frontenduser/includes/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontEnd/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/components/frontend/home/homecontent.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/admin/adminprofile.vue" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/welcomeController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/admin/adminmaster.vue" />
         <option value="$PROJECT_DIR$/public/frontend/assets/js/myjs.js" />
-        <option value="$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontEnd/frontenduser/postad/postadContent.blade.php" />
@@ -173,7 +179,6 @@
         <option value="$PROJECT_DIR$/resources/js/components/frontend/includes/profilepostedit.vue" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/public/frontend/assets/css/style.css" />
         <option value="$PROJECT_DIR$/database/migrations/2019_10_26_063839_create_postads_table.php" />
         <option value="$PROJECT_DIR$/app/postad.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
@@ -185,6 +190,11 @@
         <option value="$PROJECT_DIR$/resources/js/store/index.js" />
         <option value="$PROJECT_DIR$/resources/js/components/frontend/postad/postadetails.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/admin/adminhome.vue" />
+        <option value="$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/public/frontend/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontEnd/includes/footer.blade.php" />
       </list>
     </option>
   </component>
@@ -298,7 +308,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,6 +362,13 @@
             <path>
               <item name="Rent_plus" type="b2602c69:ProjectViewProjectNode" />
               <item name="Rent_plus" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rent_plus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rent_plus" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -388,16 +404,14 @@
               <item name="Rent_plus" type="b2602c69:ProjectViewProjectNode" />
               <item name="Rent_plus" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="postad" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Rent_plus" type="b2602c69:ProjectViewProjectNode" />
               <item name="Rent_plus" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Rent_plus" type="b2602c69:ProjectViewProjectNode" />
@@ -414,17 +428,26 @@
               <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Rent_plus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rent_plus" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploadVideos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -437,6 +460,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\newxampp\htdocs\Rent-plus\Rent_plus\public\frontend\image" />
       <recent name="C:\newxampp\htdocs\Rent-plus\Rent_plus\public\uploadVideos" />
     </key>
   </component>
@@ -515,16 +539,18 @@
       <workItem from="1579756609623" duration="23905000" />
       <workItem from="1579844364535" duration="660000" />
       <workItem from="1579871565385" duration="7974000" />
+      <workItem from="1579928984425" duration="9915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314753000" />
+    <option name="totallyTimeSpent" value="324668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16950959" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17110874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -572,16 +598,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/frontenduser/includes/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -593,13 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="127" selection-start-line="42" selection-start-column="127" selection-end-line="42" selection-end-column="127" />
         </state>
       </provider>
     </entry>
@@ -831,31 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/postadController.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadcontent.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="e#333#394#0#HTML" expanded="true" />
-            <element signature="e#650#711#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="915">
+          <caret line="61" column="148" selection-start-line="61" selection-start-column="125" selection-end-line="61" selection-end-column="148" />
         </state>
       </provider>
     </entry>
@@ -866,50 +854,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/master.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        <state relative-caret-position="210">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadcontent.vue">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/postadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="61" column="148" selection-start-line="61" selection-start-column="125" selection-end-line="61" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadSearch.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="1125">
+          <caret line="77" column="67" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/frontend/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="139" column="38" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadetails.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1361">
-          <caret line="157" column="19" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/admin/adminhome.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
+        <state relative-caret-position="-165">
           <caret line="185" column="196" selection-start-line="185" selection-start-column="196" selection-end-line="185" selection-end-column="196" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -926,6 +890,75 @@
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#2;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#2;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadSearch.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#router-link#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/frontend/postad/postadetails.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2066">
+          <caret line="157" column="19" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/includes/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="86" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/frontend/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/home/homeContent.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+          <folding>
+            <element signature="e#333#394#0#HTML" expanded="true" />
+            <element signature="e#1639#1673#0#HTML" expanded="true" />
+            <element signature="e#1883#1917#0#HTML" expanded="true" />
+            <element signature="e#2026#2060#0#HTML" expanded="true" />
+            <element signature="e#1299#1328#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/includes/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
         </state>
       </provider>
     </entry>
