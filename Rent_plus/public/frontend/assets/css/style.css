@@ -199,10 +199,26 @@ text Title_ad part
 }
 #Title_ad .row .postadd_h5{
     color:#062c33;
-    font-size: 25px;
+    font-size: 28px;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
 
+}
+#Title_ad .row .title_h{
+
+    color:#062c33;
+    font-size: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    letter-spacing: 2px;
+}
+#Title_ad .row .side_p{
+    color:#062c33;
+}
+#Title_ad .row .title_p{
+    color:#062c33;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
 }
 
 /* about part */
@@ -340,13 +356,17 @@ text Title_ad part
 
 }
 .post_add .jumbotron .row button{
-    background-color: whitesmoke;
-    border: 1px solid whitesmoke;
+    background-color: #721c24;
+    border: 1px solid #721c24;
 
+}
+.post_add .jumbotron .row button:hover{
+    background-color: #1b1e21;
+    transition: 1s;
 }
 .post_add .jumbotron .row button a{
     text-decoration: none;
-    color: #1d2124;
+    color: #ffffff;
 }
 .myfooter{
     background-color: #1b1e21;

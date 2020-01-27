@@ -138,6 +138,9 @@
 
                                 </div>
                             </div>
+                            <div class="col-lg-10 mt-3">
+                               <a href="{{route('login')}}">Already have account?</a>
+                            </div>
 
                         </div>
                     </form>
