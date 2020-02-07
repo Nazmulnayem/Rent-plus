@@ -57,8 +57,13 @@ public function postadManage(){
 
     $postads = Postad::all();
 
-    return response()->json([
-        'postads' => $postads],200);
+    if(\Request::ajax()){
+        return response()->json([
+            'postads' => $postads],200);
+
+    }
+
+   return abort(404);
 
 
 
@@ -66,8 +71,14 @@ public function postadManage(){
 }
 public function postdetails($id){
     $postads = Postad::find($id);
-    return response()->json([
-        'postads' => $postads],200);
+    if(\Request::ajax()){
+        return response()->json([
+            'postads' => $postads],200);
+
+    }
+
+    return abort(404);
+
 
 }
 
@@ -77,8 +88,13 @@ public function postadsearch(Request $request){
                          ->orWhere('Areaselect',$request->Areaselect)
                          ->orWhere('type_rent',$request->type_rent)
                        ->get();
-    return response()->json([
-        'postads' => $postads],200);
+    if(\Request::ajax()){
+        return response()->json([
+            'postads' => $postads],200);
+
+    }
+
+    return abort(404);
 
 
 
@@ -86,8 +102,13 @@ public function postadsearch(Request $request){
 }
 public function postadsearchallpost(){
     $postads = postad::all();
-    return response()->json([
-        'postads' => $postads],200);
+    if(\Request::ajax()){
+        return response()->json([
+            'postads' => $postads],200);
+
+    }
+
+    return abort(404);
 
 }
 

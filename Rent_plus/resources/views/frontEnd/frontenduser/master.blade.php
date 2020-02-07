@@ -37,7 +37,7 @@
 
                     <li class="nav-item">
 
-                        <router-link to="/profile"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="My Chats" ><i class="far fa-comments"></i><span class="badge badge-light">2</span></a></router-link>
+                        <router-link :to="`/chatlist/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="My Chats" ><i class="far fa-comments"></i><span class="badge badge-light">2</span></a></router-link>
                     </li>
                     <li class="nav-item">
                         <router-link to="/profile"> <a class="nav-link" data-toggle="tooltip" data-placement="top" title="My Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>

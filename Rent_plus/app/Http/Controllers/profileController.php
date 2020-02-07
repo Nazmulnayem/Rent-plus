@@ -10,8 +10,14 @@ class profileController extends Controller
 {
     public function profilepostmanage($name){
         $postads = Postad::Where('RenterUsername',$name)->get();
-        return response()->json([
-            'postads' => $postads],200);
+        if(\Request::ajax()){
+            return response()->json([
+                'postads' => $postads],200);
+
+        }
+
+        return abort(404);
+
 
     }
     public function profilepostdelete($id){
@@ -28,8 +34,13 @@ class profileController extends Controller
     }
     public function profilepostedit($id){
         $postads = Postad::find($id);
-        return response()->json([
-            'postads' => $postads],200);
+        if(\Request::ajax()){
+            return response()->json([
+                'postads' => $postads],200);
+
+        }
+
+        return abort(404);
 
     }
     public function profilepostupdate(Request $request, $id){

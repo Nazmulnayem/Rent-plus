@@ -30,7 +30,7 @@
                                                 <option>...</option>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-2">
+                                        <div class="form-group col-md-3">
                                             <label ><h3 style="color:#a71d2a;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">Area</h3></label>
                                             <select  class="form-control" v-model="selectArea">
                                                 <option v-if="selectCity =='Dhaka'"
@@ -38,18 +38,10 @@
                                                 <option>...</option>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-2">
+                                        <div class="form-group col-md-3">
                                             <label  ><h3 style="color:#1c7430;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700">Type</h3></label>
                                             <select  class="form-control" v-model="type_rent">
                                                 <option v-for="type in types">{{type}}</option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label  ><h3  style="color:#ba8b00;font-family: 'Raleway', sans-serif;font-max-size: 15px; font-weight: 700; border: 1px #a71d2a">Budged</h3></label>
-                                            <select  class="form-control" v-model="budget_rent">
-                                                <option v-for="budget in budgets">{{budget}}</option>
-                                                <option v-for="n in 20"> {{n}}k< </option>
                                                 <option>...</option>
                                             </select>
                                         </div>
@@ -101,7 +93,7 @@
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
                                 <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
-                                <a href="" class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a>
+                                <router-link to="/chat"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
@@ -140,7 +132,7 @@
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
                                 <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
-                                <a href="" class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a>
+                                <router-link :to="`/chat/${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
@@ -182,7 +174,7 @@
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
                                 <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
-                                <a href="" class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a>
+                                <router-link :to="`/chat/${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
                         </div>
