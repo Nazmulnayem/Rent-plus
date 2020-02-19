@@ -2208,8 +2208,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "chat",
   data: function data() {
@@ -2236,6 +2234,7 @@ __webpack_require__.r(__webpack_exports__);
           user_to: this.$route.params.name
         }).then(function (response) {
           console.log(response.data);
+          location.reload();
         });
       }
     }
@@ -54630,7 +54629,7 @@ var render = function() {
                 ],
                 staticClass: "form-control",
                 staticStyle: { border: "1px solid #17a2b8" },
-                attrs: { name: "massage" },
+                attrs: { placeholder: "Write and hit enter", name: "massage" },
                 domProps: { value: _vm.massage },
                 on: {
                   keydown: function($event) {
@@ -54649,9 +54648,7 @@ var render = function() {
                     _vm.massage = $event.target.value
                   }
                 }
-              }),
-              _vm._v(" "),
-              _vm._m(0)
+              })
             ])
           ])
         ])
@@ -54660,18 +54657,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "form-control mt-2", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "far fa-paper-plane" })]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -57185,16 +57171,29 @@ var render = function() {
               _vm._l(_vm.notifications, function(notification) {
                 return _c("tbody", [
                   _c("tr", [
-                    _c("th", { attrs: { scope: "row" } }, [
-                      _c("a", { attrs: { href: "" } }, [
-                        _vm._v(
-                          "You Liked " +
-                            _vm._s(notification.Housename) +
-                            " " +
-                            _vm._s(notification.created_at)
+                    _c(
+                      "th",
+                      { attrs: { scope: "row" } },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            attrs: {
+                              to: "/postadetails/" + notification.post_id
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "You Liked " +
+                                _vm._s(notification.Housename) +
+                                " " +
+                                _vm._s(notification.created_at)
+                            )
+                          ]
                         )
-                      ])
-                    ])
+                      ],
+                      1
+                    )
                   ])
                 ])
               })

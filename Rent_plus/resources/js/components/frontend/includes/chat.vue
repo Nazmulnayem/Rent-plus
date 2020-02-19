@@ -22,9 +22,7 @@
               <form>
               <div class="row mb-5">
                   <div class="col-lg-8">
-                          <textarea @keydown.enter="sendMessage" style="border: 1px solid #17a2b8" class="form-control" name="massage" v-model="massage"></textarea>
-
-                      <button class="form-control mt-2" type="submit" ><i class="far fa-paper-plane"></i></button>
+                          <textarea @keydown.enter="sendMessage" style="border: 1px solid #17a2b8" placeholder="Write and hit enter" class="form-control" name="massage" v-model="massage"></textarea>
                   </div>
 
               </div>
@@ -67,6 +65,7 @@
                     })
                         .then(response=>{
                             console.log(response.data)
+                            location.reload()
                         })
                 }
             }
