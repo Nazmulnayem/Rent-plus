@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\likeinfo;
 use Illuminate\Http\Request;
 use App\postad;
 use Image;
@@ -20,7 +21,8 @@ class postadController extends Controller
             'RenterUsername' => 'required',
             'Housename' => 'required',
             'phonenumber' => 'required',
-            'availablefloor' => 'required'
+            'availablefloor' => 'required',
+            'user_type' => 'required'
 
 
         ]);
@@ -83,10 +85,10 @@ public function postdetails($id){
 }
 
 public function postadsearch(Request $request){
-        $postads = postad::where('Divisionselect',$request->Divisionselect)
-                         ->orWhere('Cityselect',$request->Cityselect)
-                         ->orWhere('Areaselect',$request->Areaselect)
-                         ->orWhere('type_rent',$request->type_rent)
+        $postads = postad::where('Divisionselect',$request->selectDivision)
+                         ->Where('Cityselect',$request->selectCity)
+                         ->Where('Areaselect',$request->selectArea)
+                         ->Where('type_rent',$request->type_rent)
                        ->get();
     if(\Request::ajax()){
         return response()->json([
@@ -110,6 +112,38 @@ public function postadsearchallpost(){
 
     return abort(404);
 
+
 }
+    public function postadlike(Request $request){
+
+        $likeinfo = new likeinfo();
+
+        $likeinfo->like_from = auth()->user()->name;
+        $likeinfo->post_id =$request->post_id;
+        $likeinfo->Housename =$request->Housename;
+        $likeinfo->save();
+
+
+
+
+    }
+
+    public function postadconfirmdetails($id){
+        $postads = Postad::find($id);
+        if(\Request::ajax()){
+            return response()->json([
+                'postads' => $postads],200);
+
+        }
+
+        return abort(404);
+
+    }
+    public function postadnotification($name){
+
+        $likeinfos = likeinfo::where('like_from',$name)->get();
+        return response()->json([
+            'likeinfos' => $likeinfos],200);
+    }
 
 }

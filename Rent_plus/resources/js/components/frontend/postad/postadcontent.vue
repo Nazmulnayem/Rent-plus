@@ -220,7 +220,7 @@
                                     </select>
                                 </div>
                                 <div v-if="user_type=='Top-Rents'">
-                                    <button  class="form-control">Sir Pay only 21taka for {{user_type}}</button>
+                                    <button  class="form-control">Sir Pay only 21taka for show in Top</button>
                                 </div>
                             </div>
 

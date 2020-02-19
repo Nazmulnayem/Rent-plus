@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-  protected $guarded =[];
+  protected $fillable =['name','email','phone_number','parmanent_address','present_address','password'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -29,7 +29,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function chat(){
-        return $this->hasMany(chat::class,'from');
-    }
+
 }

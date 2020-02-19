@@ -40,10 +40,10 @@
                         <router-link :to="`/chatlist/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="My Chats" ><i class="far fa-comments"></i><span class="badge badge-light">2</span></a></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/profile"> <a class="nav-link" data-toggle="tooltip" data-placement="top" title="My Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>
+                        <router-link :to="`/notifications/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="`profile/{{Auth::user()->name}}`"><a class="nav-link" title="My Profile"><i class="fas fa-user-circle"></i></a></router-link>
+                        <router-link :to="`/profile/{{Auth::user()->name}}`"><a to="/home" class="nav-link" title="My Profile"><i class="fas fa-user-circle"></i></a></router-link>
                     </li>
                     <li class="nav-item postad_item">
                         <router-link to="/postad"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>

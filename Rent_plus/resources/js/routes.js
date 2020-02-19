@@ -6,6 +6,8 @@ import postdetails from './components/frontend/postad/postadetails'
 import postsearch from './components/frontend/postad/postadSearch'
 import chat from './components/frontend/includes/chat'
 import chatlist from './components/frontend/includes/chatlist'
+import postadnotifications from './components/frontend/postad/postnotificationsconfirm'
+import postnotificationsshow from './components/frontend/postad/postnotificationsshow'
 export const routes = [
 
     {
@@ -39,6 +41,16 @@ export const routes = [
     {
         path:'/chatlist/:name',
         component: chatlist
+    },
+    {
+        path:'/postadlike/:id',
+        component: postadnotifications
+
+    },
+    {
+        path:'/notifications/:name',
+        component: postnotificationsshow
+
     }
 
 ]

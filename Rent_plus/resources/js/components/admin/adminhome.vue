@@ -84,7 +84,7 @@
                     <div class="col-lg-6 col-sm-6 pt-3 pb-3"  v-for="postad in posts">
                         <div class="about_inner1 pl-5 pr-5 pt-5 pb-5" style="background:linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43));">
                             <img :src="postadImg(postad.image_name)" style="height: 300px; width: 400px;">
-                            <p class="mt-5"><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
+                            <p class="mt-5"><i class="fas fa-user-tie"></i> Available floor: {{postad.availablefloor}}</p>
                             <p ><i class="fas fa-check-circle"></i> Type: {{postad.type_rent}}</p>
                             <p ><i class="fas fa-check-circle"></i> budget: {{postad.budget_rent}}</p>
                             <p ><i class="fas fa-check-circle"></i> Location:{{postad.Areaselect}},{{postad.Cityselect}}, {{postad.Divisionselect}}</p>
@@ -92,7 +92,7 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
+                                <a href="" class="mr-5" role="button" title="Like this post" style="font-size: 26px;"><i class="fa fa-user"></i></a>
                                 <router-link to="/chat"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
@@ -131,7 +131,7 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
+                                <router-link :to="`/postadlike/${postad.id}`"><a  class="mr-5" role="button" title="Save this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
                                 <router-link :to="`/chat/${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
@@ -173,7 +173,7 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <a href="" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
+                                <router-link :to="`/postadlike/${postad.id}`"><a  class="mr-5" role="button" title="Like this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
                                 <router-link :to="`/chat/${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
@@ -281,11 +281,12 @@
 
                     })
                     .catch(function (error) {
-                        console.log(error);
+                        console.log();
                     })
 
 
             }
+
 
         }
 

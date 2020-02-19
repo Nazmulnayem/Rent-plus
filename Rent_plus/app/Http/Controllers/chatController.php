@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Events\MessageSend;
 use Illuminate\Http\Request;
 use App\chat;
-use App\User;
+
 
 
 class chatController extends Controller
 {
+
     public function chatdata($name=null){
 
         if(!\Request::ajax()){
@@ -35,15 +36,16 @@ class chatController extends Controller
     }
     public function chatmassages(Request $request){
 
-      $chat = new Chat();
-        $chat->from  = auth()->user()->name;
-        $chat->to  = $request->user_to;
-        $chat->massage  = $request->massage;
-        $chat->save();
+         $chatmassage = new Chat();
+        $chatmassage->from = auth()->user()->name;
 
-        broadcast(new MessageSend($chat));
+        $chatmassage->to = $request->user_to;
 
+        $chatmassage->massage =$request->massage;
+        $chatmassage->type = 0;
+        $chatmassage ->save();
     }
+
     public function chatlist($name){
 
         if(!\Request::ajax()){
@@ -52,14 +54,14 @@ class chatController extends Controller
         }
         $chatdata = chat::where(function ($q) use($name){
 
-            $q->whereNotIn('to',[$name]);
+            $q->whereIn('from',[$name]);
 
 
         })->orWhere(function ($q) use($name){
 
-            $q->whereNotIn('from',[$name]);
+            $q->whereIn('to',[$name]);
 
-        })->first();
+        })->get();
 
 
 

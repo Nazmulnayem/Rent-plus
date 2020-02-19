@@ -69,7 +69,7 @@ class RegisterController extends Controller
             'phone_number'=> $data['phone_number'],
             'parmanent_address'=> $data['parmanent_address'],
             'present_address' =>$data['present_address'],
-            'phone_number'=> $data['phone_number'],
+
 
             'password' => Hash::make($data['password']),
         ]);

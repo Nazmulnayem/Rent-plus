@@ -21,8 +21,9 @@ Auth::routes();
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::group(['middleware'=>'Rentplus'],function(){
+    Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/postad', 'postadController@postad')->name('');
     Route::post('/postad/save', 'postadController@postadsave')->name('');
     Route::get('/postad/search', 'postadController@postadsearch')->name('');
@@ -33,9 +34,14 @@ Route::group(['middleware'=>'Rentplus'],function(){
     Route::post('/update/{id}', 'profileController@profilepostupdate')->name('');
     Route::get('/postadetails/{id}', 'postadController@postdetails')->name('');
     Route::get('/postad/search/all', 'postadController@postadsearchallpost')->name('searchresult');
+    Route::get('/postad/likeconfirm', 'postadController@postadlike');
+    Route::get('/postad/confirmdetails/{id}', 'postadController@postadconfirmdetails');
+    Route::get('/postad/notification/{name}', 'postadController@postadnotification');
     Route::get('/chat/{name}', 'chatController@chatdata');
     Route::get('/chatlist/{name}', 'chatController@chatlist');
-    Route::post('/massages','chatController@chatmassages');
+    Route::post('/massages/save', 'chatController@chatmassages')->name('');
+
+
 
 
 });

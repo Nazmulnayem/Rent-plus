@@ -101,15 +101,15 @@
 
                 <div class="col-lg-4">
                     <h5 class="title_h mt-5 text-center"><i class="fas fa-user"></i></h5>
-                    <p class="text-center">Please put uniqe username and use this name when you post an ad for rent</p>
+                    <p class="text-center">Please put uniqe username and use this name when you post an ad for rent.</p>
                 </div>
                 <div class="col-lg-4">
                     <h5 class="title_h mt-5 text-center"><i class="fas fa-money-bill-alt"></i></h5>
-                    <p class="text-center">For Top Rents you have to pay only 21tk All rents are totally free</p>
+                    <p class="text-center">For Top Rents you have to pay only 21tk<mark>Will show your post top of the page</mark> All rents are totally free.</p>
                 </div>
                 <div class="col-lg-4">
                     <h5 class="title_h mt-5 text-center"><i class="far fa-bell"></i></h5>
-                    <p class="text-center">Please delete your post after its become unnecessary</p>
+                    <p class="text-center">Please delete your post after its become unnecessary.</p>
                 </div>
 
             </div>

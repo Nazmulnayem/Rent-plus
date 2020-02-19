@@ -79,6 +79,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center text-center mt-3">
+                    <div class="col-lg-10 ">
+                        <div class="section_head pb-3 mb-3">
+                            <h2 class="shadow-lg">About Rent</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center text-center mt-3">
+                    <div class="col-lg-10 ">
+                        <div class="section_head pb-5 mb-3">
+                            <h3 class="mt-3" id="About_rent">{{form.About_rent}}</h3>
+
+
+                        </div>
+                    </div>
+                </div>
+
 
             </diV>
 
@@ -119,8 +137,6 @@
         created() {
             axios.get(`/postadetails/${this.$route.params.id}`)
                 .then((response) => {
-
-                    console.log(response.data.postads)
                     this.form.fill(response.data.postads)
                 })
         },

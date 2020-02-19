@@ -11,25 +11,18 @@
 
               </div>
               <div class="row" v-for="chat in chats">
-                  <div class="col-lg-3">
-                      <h3 v-if="chat.from==userTo">{{chat.from}}</h3>
-                      <p v-if="chat.from==userTo" class="chatboxto">{{chat.massage}}</p>
+                  <div class="col-lg-3 fa-blender-phone">
+                      <h3 >{{chat.from}}</h3>
+                      <p class="chatboxto">{{chat.massage}}</p>
 
                   </div>
 
               </div>
-              <div class="row justify-content-center" v-for="chat in chats">
-                  <div class="col-lg-3">
-                      <h3  v-if="chat.from!=userTo">{{chat.from}}</h3>
-                      <p class="chatboxfrom">{{chat.massage}}</p>
 
-                  </div>
-
-              </div>
               <form>
               <div class="row mb-5">
                   <div class="col-lg-8">
-                          <textarea @keydown.enter="sendMessage" style="border: 1px solid #17a2b8" class="form-control" v-model="massage"></textarea>
+                          <textarea @keydown.enter="sendMessage" style="border: 1px solid #17a2b8" class="form-control" name="massage" v-model="massage"></textarea>
 
                       <button class="form-control mt-2" type="submit" ><i class="far fa-paper-plane"></i></button>
                   </div>
@@ -47,44 +40,34 @@
 <script>
     export default {
         name: "chat",
-        data(){
-            return{
-                chats:[],
-                massage:'',
+        data() {
+            return {
+                chats: [],
+                massage: '',
                 userTo: this.$route.params.name
 
             }
         },
-        mounted(){
-            Echo.channel(`chat`)
-                .listen('MessageSend', (e) => {
-                    console.log(e);
-                });
-
-        },
         created() {
             axios.get(`/chat/${this.$route.params.name}`)
                 .then((response) => {
-                  this.chats = response.data.chatdata
+                    this.chats = response.data.chatdata
 
 
                 })
         },
-        methods:{
-            sendMessage(e) {
+        methods: {
+            sendMessage(e){
                 e.preventDefault();
-                if (this.massage != '') {
-                    axios.post('/massages', {
-                        massage: this.massage,
-                        user_to: this.$route.params.name
+                if(this.message != '' ){
 
+                    axios.post('/massages/save',{
+                        massage : this.massage,
+                        user_to : this.$route.params.name
                     })
-                        .then(response => {
+                        .then(response=>{
                             console.log(response.data)
-
                         })
-
-
                 }
             }
         }
