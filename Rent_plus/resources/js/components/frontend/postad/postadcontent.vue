@@ -16,11 +16,9 @@
 
                                 </label>
                                 <div class="input-group" :class="{ 'input-group--error': $v.RenterUsername.$error }">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
-                                    </div>
+
                                     <p></p>
-                                    <input type="text" @input="setName($event.target.value)" class="form-control" placeholder="Renter Username" v-model="RenterUsername" @click="Rent =! Rent">
+                                    <input type="hidden" @input="setName($event.target.value)" class="form-control" placeholder="Username" v-model="RenterUsername" @click="Rent =! Rent">
 
                                 </div>
                             </div>
@@ -33,7 +31,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <div class="error text-danger" v-if="!$v.RenterUsername.required">Field is required.RenterUsername must be unique as signin</div>
+                                    <div class="error text-danger" v-if="!$v.RenterUsername.required"></div>
                                     <div class="error" v-if="!$v.RenterUsername.minLength">Name must have at least {{$v.name.$params.minLength.min}} letters.</div>
 
                                 </div>
@@ -220,7 +218,67 @@
                                     </select>
                                 </div>
                                 <div v-if="user_type=='Top-Rents'">
-                                    <button  class="form-control">Sir Pay only 21taka for show in Top</button>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModalCenter"  class="form-control">Sir Pay only 21taka for show in Top</button>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Payment 01xxxxxxxxx this number</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="col-lg-10 mt-3">
+                                                <label class="sr-only">
+
+
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text text-center"><i class="fa fa-tasks"></i></div>
+                                                    </div>
+                                                    <select class="form-control" v-model="payment_type">
+                                                        <option v-for="type in payment_types" :selected="type =='select-payment-method'">{{type}}</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-10 mt-3">
+                                                <label class="sr-only">
+
+
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text text-center"><i class="fa fa-building"></i></div>
+                                                    </div>
+                                                    <input type="number" class="form-control" placeholder="Phone" v-model="phone" >
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-10 mt-3">
+                                                <label class="sr-only">
+
+
+                                                </label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text text-center"><i class="fa fa-building"></i></div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="TransectionID" v-model="TransectionID" >
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-success" data-dismiss="modal" @click.prevent="cash">Payment submit</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -289,7 +347,12 @@
                  user_types:['Top-Rents','All-Rents'],
                 user_type:'All-Rents',
                 Datasave:'data save successfully',
-                submitStatus:null
+                submitStatus:null,
+                payment_types:['select-payment-method','Bkash','Rocket','Nogod'],
+                payment_type:'select-payment-method',
+                TransectionID:'',
+                phone:'',
+            Username:this.$route.params.name
             }
         },
         validations: {
@@ -304,7 +367,7 @@
 
 
                 axios.post('/postad/save', {
-                    RenterUsername: this.RenterUsername,
+                    RenterUsername: this.Username,
                     Housename: this.Housename,
                     availablefrom: this.availablefrom,
                     phonenumber: this.phonenumber,
@@ -347,6 +410,20 @@
                     reader.readAsDataURL(file);
                 }
 
+
+            },
+            cash(){
+                console.log('hi')
+                axios.post('/postad/save/payment', {
+                    payment_type  : this.payment_type
+
+                })
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
 
             }
         }

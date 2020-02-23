@@ -23,7 +23,7 @@ export const routes = [
         component: profilepostedit
     },
     {
-        path:'/postad',
+        path:'/postad/:name',
         component: postadcomponent
     },
     {

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/frontend/assets/css/slick-theme.css">
 
 
-    <title> @yield('title') </title>
+    <title> RentPlus </title>
 
 </head>
 <body >
@@ -46,7 +46,7 @@
                         <router-link :to="`/profile/{{Auth::user()->name}}`"><a to="/home" class="nav-link" title="My Profile"><i class="fas fa-user-circle"></i></a></router-link>
                     </li>
                     <li class="nav-item postad_item">
-                        <router-link to="/postad"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>
+                        <router-link :to="`/postad/{{Auth::user()->name}}`"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>
                     </li>
                     <li class="nav-item ">
                         <router-link to="/"><a class="nav-link"><i class="fas fa-user-tie"></i> Hi {{ Auth::user()->name}}</a></router-link>
@@ -73,6 +73,23 @@
 
 
     <home-component></home-component>
+    <section class="post_add">
+        <div class="jumbotron ">
+            <div class="container">
+                <div class="row align-content-center text-center">
+                    <div class="col-lg-12">
+
+                        <h2 class="postadd_h1">Post your ads at free cost to reach more people in Online.</h2>
+                        <button type="button" class="btn btn-info mt-3 shadow-lg"><router-link :to="`/postad/{{Auth::user()->name}}`"><a >Post your Rent Advertisement Here</a></router-link></button>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
 
 
 

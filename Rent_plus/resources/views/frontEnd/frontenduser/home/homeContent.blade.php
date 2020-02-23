@@ -5,165 +5,121 @@
 @endsection
 
 @section('mainContent')
-    <section id="banner">
+    <section id="app">
+        <nav class="navbar navbar-expand-lg navbar-light head_menu shadow-lg" id="header">
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="container clearfix ">
+                <router-link class="navbar-brand " to="/"><img src="/frontend/image/rp.PNG" alt=""></router-link>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="carousel-inner">
+                <div class="collapse navbar-collapse" id="mynav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <router-link to="/"><a class="nav-link"><i class="fas fa-home"></i></a></router-link>
+                        </li>
 
+                        <li class="nav-item">
 
-                <div class="carousel-item active" style="background:linear-gradient(to right,#0c5460,#4e555b);">
-                    <div class="carousel-caption" id="app">
-                        <h1 class="bounceIn mb-5">Only for House Rents</h1>
-                        <p></p>
+                            <router-link :to="`/chatlist/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="My Chats" ><i class="far fa-comments"></i><span class="badge badge-light">2</span></a></router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link :to="`/notifications/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link :to="`/profile/{{Auth::user()->name}}`"><a to="/home" class="nav-link" title="My Profile"><i class="fas fa-user-circle"></i></a></router-link>
+                        </li>
+                        <li class="nav-item postad_item">
+                            <router-link to="/postad"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>
+                        </li>
+                        <li class="nav-item ">
+                            <router-link to="/"><a class="nav-link"><i class="fas fa-user-tie"></i> Hi {{ Auth::user()->name}}</a></router-link>
+                        </li>
 
-                        <div id="app">
+                        <li class="nav-item login">
+                            <a class="nav-link" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-                            <home-component></home-component>
-                        </div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
 
-                </div>
-
-
-            </div>
-        </div>
-        </div>
-
-
-
-    </section>
-
-    <section class="about_part" id="Toprents">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10 ">
-                    <div class="section_head pb-5 mb-5 shadow-sm">
-                        <h2>Top Rents</h2>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row slick_top shadow-sm justify-content-center text-center" style="background:linear-gradient(to right,#ffe70a,rgba(43,43,43,0.43));">
-                <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner1">
-                        <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
-                        <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
-                    </div>
-                </div>
-                <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner1">
-                        <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
-                        <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
-                    </div>
-                </div>
-                <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner1">
-                        <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
-                        <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
-                    </div>
-                </div>
-                <div class="col-lg-3  pb-4 ">
-                    <div class="about_inner1">
-                        <h4 class="ml-3 pt-3"><i class="fas fa-home"></i> HouseName: Nazmul villa </h4>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> HouseOwner: Nazmul Hasan</p>
-                        <p class="ml-3 pt-3"><i class="fas fa-user-tie"></i> Avaiable floor: 3</p>
-                        <p class="ml-3 pt-3 pb-3"><i class="fas fa-check-circle"></i> Area: kalshi</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: Family</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: 20k</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-10 ">
-                <div class="section_head2 pt-3">
-                    <a href="">See More <i class="fas fa-external-link-square-alt"></i></a>
+                    </ul>
 
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
-    <section class="All_rents" id="Allrents">
-        <div class="container pb-5">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10">
-                    <div class="section_head1 pb-5 mb-5">
-                        <h2 class="shadow-lg">All Rents</h2>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                @foreach($postads as $postad)
-                <div class="col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad">
-                    <div class="about_inner1 pl-5 pr-5 pt-5 pb-5">
-                        <h4 ><i class="fas fa-home mr-3"></i> HouseName: <a href="">{{$postad->Housename}}</a></h4>
-                        <p ><i class="fas fa-user-tie"></i> HouseOwner: <a href="">{{$postad->RenterUsername}}</a></p>
-                        <p ><i class="fas fa-user-tie"></i> Avaiable floor: {{$postad->availablefloor}}</p>
-                        <p ><i class="fas fa-check-circle"></i> Type: {{$postad->type_rent}}</p>
-                        <p ><i class="fas fa-check-circle"></i> budget: {{$postad->budget_rent}}</p>
-                        <p ><i class="fas fa-check-circle"></i> Area: {{$postad->Areaselect}}</p>
-                        <p ><i class="fas fa-check-circle"></i> City: {{$postad->Cityselect}}</p>
-                        <p ><i class="fas fa-check-circle"></i> Division: {{$postad->Divisionselect}}</p>
-                        <p ><i class="fas fa-user-tie"></i> Phone number: {{$postad->phonenumber}}</p>
-                        <p ><i class="fas fa-check-circle"></i> click here for details</p>
-                        <div class="">
-                            <a href="{{route('home')}}" class="mr-5" role="button" title="Send A  Rent Request" style="font-size: 26px;"><i class="fa fa-user"></i></a>
-                            <a href="" class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a>
-                            <a href="" class="" role="button" title="See Details" style="font-size: 26px;"><i class="fa fa-reply"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-                    @endforeach
+        </nav>
 
 
-            </div>
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10 ">
-                    <div class="section_head2 pt-3">
-                        <a href="">See More <i class="fas fa-external-link-square-alt"></i></a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="post_add">
-        <div class="jumbotron ">
+        <home-component></home-component>
+
+
+
+
+
+
+        <footer class="myfooter">
             <div class="container">
-                <div class="row align-content-center text-center">
-                    <div class="col-lg-12">
-
-                        <h2 class="postadd_h1">Post your ads at free cost to reach more people in Online.</h2>
-                        <button type="button" class="btn btn-info mt-3 shadow-lg"><a href="">Post Your Advertisement Here</a></button>
 
 
+                <div class="row justify-content-center  ">
+                    <div class="col-lg-6">
+                        <div class="section_head3 pb-2 mb-3 pt-4 mt-4">
+                            <h2>About Rentplus</h2>
+                            <p>We are one of the best RENT HOUSE site in all over BANGLADESH. Post your ads at free cost to reach more people in Online. It's a RENT A HOUSE solution. We have more than 8000+ customers are there. Post Your free ads related to their business and get target customer in RENTPLUS. Customers can promote their business very fast and high traffic in online. We are providing highest SEO benefits.</p>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="section_head3 pb-2 mb-3 pt-4 mt-4">
+                            <h4>Valuable Link</h4>
+                            <p><a href="#header"><i class="fas fa-caret-right"></i> signin</a></p>
+                            <p><a href="#header"><i class="fas fa-caret-right"></i> login</a></p>
+                            <p><a href="#Allrents"><i class="fas fa-caret-right"></i> All rent</a></p>
+                            <p><a href="#Toprents"><i class="fas fa-caret-right"></i> Top rent</a></p>
+                            <p><a href="#header"><i class="fas fa-caret-right"></i> Privacy Policy</a></p>
+                            <p><a href="#header"><i class="fas fa-caret-right"></i> Tearms and Condition</a></p>
+
+
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="section_head3 pb-2 mb-4 pt-3 mt-4" id="app">
+                            <h2>Contact us</h2>
+                            <p>Mail : <i class="far fa-envelope"></i> Rentplusbd@gmail.com</p>
+                            <p>Phone : <i class="fas fa-mobile-alt"></i> 01775641072</p>
+                            <p> All rights reserve &copy; Rentplus 2019</p>
+                            <a class="pr-3 pt-3" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="pr-3" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="pr-3" href=""><i class="fab fa-twitter"></i></i></a>
+
+
+                        </div>
+                        <div>
+
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+            </div>
+
+
+        </footer>
 
     </section>
+
 @endsection

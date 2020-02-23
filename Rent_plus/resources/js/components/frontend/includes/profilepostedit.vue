@@ -20,7 +20,7 @@
                                         <div class="input-group-text text-center"><i class="fa fa-user-circle"></i></div>
                                     </div>
                                     <p></p>
-                                    <input type="text"  class="form-control" placeholder="Renter Username" name="RenterUsername" v-model="form.RenterUsername" @click="Rent =! Rent">
+                                    <input type="text"  class="form-control" placeholder="Renter Username" name="RenterUsername" v-model="form.RenterUsername" @click="Rent =! Rent" disabled>
 
                                 </div>
                             </div>

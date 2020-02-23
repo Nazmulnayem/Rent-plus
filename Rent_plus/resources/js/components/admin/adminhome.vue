@@ -92,7 +92,7 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <a href="" class="mr-5" role="button" title="Like this post" style="font-size: 26px;"><i class="fa fa-user"></i></a>
+                                <router-link :to="`/postadlike/${postad.id}`"><a  class="mr-5" role="button" title="Save this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
                                 <router-link to="/chat"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
                                 <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
@@ -204,23 +204,7 @@
 
         </section>
 
-        <section class="post_add">
-            <div class="jumbotron ">
-                <div class="container">
-                    <div class="row align-content-center text-center">
-                        <div class="col-lg-12">
 
-                            <h2 class="postadd_h1">Post your ads at free cost to reach more people in Online.</h2>
-                            <button type="button" class="btn btn-info mt-3 shadow-lg"><a href="">Post Your Advertisement Here</a></button>
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
     </div>
 
 </template>

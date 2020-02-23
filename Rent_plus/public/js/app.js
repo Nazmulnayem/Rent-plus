@@ -2073,22 +2073,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2820,6 +2804,66 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3085,7 +3129,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {
+    var _ref;
+
+    return _ref = {
       post: [],
       RenterUsername: '',
       Housename: '',
@@ -3110,8 +3156,11 @@ __webpack_require__.r(__webpack_exports__);
       user_types: ['Top-Rents', 'All-Rents'],
       user_type: 'All-Rents',
       Datasave: 'data save successfully',
-      submitStatus: null
-    };
+      submitStatus: null,
+      payment_types: ['select-payment-method', 'Bkash', 'Rocket', 'Nogod'],
+      payment_type: 'select-payment-method',
+      TransectionID: ''
+    }, _defineProperty(_ref, "phone", ''), _defineProperty(_ref, "Username", this.$route.params.name), _ref;
   },
   validations: {
     RenterUsername: {
@@ -3122,7 +3171,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     postsave: function postsave() {
       axios.post('/postad/save', {
-        RenterUsername: this.RenterUsername,
+        RenterUsername: this.Username,
         Housename: this.Housename,
         availablefrom: this.availablefrom,
         phonenumber: this.phonenumber,
@@ -3156,6 +3205,16 @@ __webpack_require__.r(__webpack_exports__);
 
         reader.readAsDataURL(file);
       }
+    },
+    cash: function cash() {
+      console.log('hi');
+      axios.post('/postad/save/payment', {
+        payment_type: this.payment_type
+      }).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   }
 });
@@ -53982,7 +54041,24 @@ var render = function() {
                             "div",
                             {},
                             [
-                              _vm._m(6, true),
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/postadlike/" + postad.id } },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "mr-5",
+                                      staticStyle: { "font-size": "26px" },
+                                      attrs: {
+                                        role: "button",
+                                        title: "Save this post"
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-user" })]
+                                  )
+                                ]
+                              ),
                               _vm._v(" "),
                               _c("router-link", { attrs: { to: "/chat" } }, [
                                 _c(
@@ -54034,7 +54110,7 @@ var render = function() {
     _vm._v(" "),
     _c("section", { staticClass: "about_part", attrs: { id: "Toprents" } }, [
       _c("div", { staticClass: "container" }, [
-        _vm._m(7),
+        _vm._m(6),
         _vm._v(" "),
         _c(
           "div",
@@ -54091,7 +54167,7 @@ var render = function() {
                         _vm._v(" Upload: " + _vm._s(postad.created_at))
                       ]),
                       _vm._v(" "),
-                      _vm._m(8, true),
+                      _vm._m(7, true),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -54168,7 +54244,7 @@ var render = function() {
       { staticClass: "All_rents position-relative", attrs: { id: "Allrents" } },
       [
         _c("div", { staticClass: "container pb-5" }, [
-          _vm._m(9),
+          _vm._m(8),
           _vm._v(" "),
           _c(
             "div",
@@ -54232,7 +54308,7 @@ var render = function() {
                               )
                             ]),
                             _vm._v(" "),
-                            _vm._m(10, true),
+                            _vm._m(9, true),
                             _vm._v(" "),
                             _c(
                               "div",
@@ -54319,12 +54395,10 @@ var render = function() {
             2
           ),
           _vm._v(" "),
-          _vm._m(11)
+          _vm._m(10)
         ])
       ]
-    ),
-    _vm._v(" "),
-    _vm._m(12)
+    )
   ])
 }
 var staticRenderFns = [
@@ -54435,20 +54509,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "a",
-      {
-        staticClass: "mr-5",
-        staticStyle: { "font-size": "26px" },
-        attrs: { href: "", role: "button", title: "Like this post" }
-      },
-      [_c("i", { staticClass: "fa fa-user" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
       "div",
       { staticClass: "row justify-content-center text-center" },
       [
@@ -54507,39 +54567,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "post_add" }, [
-      _c("div", { staticClass: "jumbotron " }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row align-content-center text-center" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("h2", { staticClass: "postadd_h1" }, [
-                _vm._v(
-                  "Post your ads at free cost to reach more people in Online."
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-info mt-3 shadow-lg",
-                  attrs: { type: "button" }
-                },
-                [
-                  _c("a", { attrs: { href: "" } }, [
-                    _vm._v("Post Your Advertisement Here")
-                  ])
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -55029,7 +55056,8 @@ var render = function() {
                         attrs: {
                           type: "text",
                           placeholder: "Renter Username",
-                          name: "RenterUsername"
+                          name: "RenterUsername",
+                          disabled: ""
                         },
                         domProps: { value: _vm.form.RenterUsername },
                         on: {
@@ -55895,8 +55923,6 @@ var render = function() {
                       }
                     },
                     [
-                      _vm._m(1),
-                      _vm._v(" "),
                       _c("p"),
                       _vm._v(" "),
                       _c("input", {
@@ -55909,7 +55935,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "form-control",
-                        attrs: { type: "text", placeholder: "Renter Username" },
+                        attrs: { type: "hidden", placeholder: "Username" },
                         domProps: { value: _vm.RenterUsername },
                         on: {
                           input: [
@@ -55939,11 +55965,7 @@ var render = function() {
                     _c("div", { staticClass: "input-group-prepend" }),
                     _vm._v(" "),
                     !_vm.$v.RenterUsername.required
-                      ? _c("div", { staticClass: "error text-danger" }, [
-                          _vm._v(
-                            "Field is required.RenterUsername must be unique as signin"
-                          )
-                        ])
+                      ? _c("div", { staticClass: "error text-danger" })
                       : _vm._e(),
                     _vm._v(" "),
                     !_vm.$v.RenterUsername.minLength
@@ -55970,7 +55992,7 @@ var render = function() {
                       }
                     },
                     [
-                      _vm._m(2),
+                      _vm._m(1),
                       _vm._v(" "),
                       _c("input", {
                         directives: [
@@ -56001,7 +56023,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(3),
+                    _vm._m(2),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
@@ -56050,7 +56072,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(4),
+                    _vm._m(3),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
@@ -56083,7 +56105,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(5),
+                    _vm._m(4),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
@@ -56113,7 +56135,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(6),
+                    _vm._m(5),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -56159,7 +56181,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(7),
+                    _vm._m(6),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -56207,7 +56229,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(8),
+                    _vm._m(7),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -56249,7 +56271,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(9),
+                    _vm._m(8),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -56293,7 +56315,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(10),
+                    _vm._m(9),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -56337,7 +56359,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(11),
+                    _vm._m(10),
                     _vm._v(" "),
                     _c("textarea", {
                       directives: [
@@ -56367,7 +56389,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(12),
+                    _vm._m(11),
                     _vm._v(" "),
                     _c("textarea", {
                       directives: [
@@ -56397,7 +56419,7 @@ var render = function() {
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(13),
+                    _vm._m(12),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -56436,18 +56458,198 @@ var render = function() {
                   _vm._v(" "),
                   _vm.user_type == "Top-Rents"
                     ? _c("div", [
-                        _c("button", { staticClass: "form-control" }, [
-                          _vm._v("Sir Pay only 21taka for show in Top")
-                        ])
+                        _c(
+                          "button",
+                          {
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "button",
+                              "data-toggle": "modal",
+                              "data-target": "#exampleModalCenter"
+                            }
+                          },
+                          [_vm._v("Sir Pay only 21taka for show in Top")]
+                        )
                       ])
                     : _vm._e()
                 ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal fade",
+                    attrs: {
+                      id: "exampleModalCenter",
+                      tabindex: "-1",
+                      role: "dialog",
+                      "aria-labelledby": "exampleModalCenterTitle",
+                      "aria-hidden": "true"
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "modal-dialog modal-dialog-centered",
+                        attrs: { role: "document" }
+                      },
+                      [
+                        _c("div", { staticClass: "modal-content" }, [
+                          _vm._m(13),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "modal-body" }, [
+                            _c("div", { staticClass: "col-lg-10 mt-3" }, [
+                              _c("label", { staticClass: "sr-only" }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "input-group" }, [
+                                _vm._m(14),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.payment_type,
+                                        expression: "payment_type"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.payment_type = $event.target
+                                          .multiple
+                                          ? $$selectedVal
+                                          : $$selectedVal[0]
+                                      }
+                                    }
+                                  },
+                                  _vm._l(_vm.payment_types, function(type) {
+                                    return _c(
+                                      "option",
+                                      {
+                                        domProps: {
+                                          selected:
+                                            type == "select-payment-method"
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(type))]
+                                    )
+                                  }),
+                                  0
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-lg-10 mt-3" }, [
+                              _c("label", { staticClass: "sr-only" }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "input-group" }, [
+                                _vm._m(15),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.phone,
+                                      expression: "phone"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "number",
+                                    placeholder: "Phone"
+                                  },
+                                  domProps: { value: _vm.phone },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.phone = $event.target.value
+                                    }
+                                  }
+                                })
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-lg-10 mt-3" }, [
+                              _c("label", { staticClass: "sr-only" }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "input-group" }, [
+                                _vm._m(16),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.TransectionID,
+                                      expression: "TransectionID"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "TransectionID"
+                                  },
+                                  domProps: { value: _vm.TransectionID },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.TransectionID = $event.target.value
+                                    }
+                                  }
+                                })
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "modal-footer" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-success",
+                                attrs: {
+                                  type: "button",
+                                  "data-dismiss": "modal"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.cash($event)
+                                  }
+                                }
+                              },
+                              [_vm._v("Payment submit")]
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  ]
+                ),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-10 mt-3" }, [
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
-                    _vm._m(14),
+                    _vm._m(17),
                     _vm._v(" "),
                     _c("input", {
                       staticClass: "form-control",
@@ -56491,16 +56693,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center mt-4" }, [
       _c("h1", [_vm._v("Post A Rent ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text text-center" }, [
-        _c("i", { staticClass: "fa fa-user-circle" })
-      ])
     ])
   },
   function() {
@@ -56620,6 +56812,61 @@ var staticRenderFns = [
     return _c("div", { staticClass: "input-group-prepend" }, [
       _c("div", { staticClass: "input-group-text text-center" }, [
         _c("i", { staticClass: "fa fa-money-check" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLongTitle" } },
+        [_vm._v("Payment 01xxxxxxxxx this number")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text text-center" }, [
+        _c("i", { staticClass: "fa fa-tasks" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text text-center" }, [
+        _c("i", { staticClass: "fa fa-building" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text text-center" }, [
+        _c("i", { staticClass: "fa fa-building" })
       ])
     ])
   },
@@ -76341,7 +76588,7 @@ var routes = [{
   path: '/profile/profile-edit/:id',
   component: _components_frontend_includes_profilepostedit__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
-  path: '/postad',
+  path: '/postad/:name',
   component: _components_frontend_postad_postadcontent__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
   path: '/postadetails/:id',
