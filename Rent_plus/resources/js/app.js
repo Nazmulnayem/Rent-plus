@@ -55,6 +55,7 @@ Vue.component('home-component', require('./components/admin/adminmaster').defaul
 
 
 
+
 const router = new VueRouter({
     routes,
 

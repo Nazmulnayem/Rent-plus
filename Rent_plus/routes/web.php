@@ -40,6 +40,7 @@ Route::group(['middleware'=>'Rentplus'],function(){
     Route::get('/chat/{name}', 'chatController@chatdata');
     Route::get('/chatlist/{name}', 'chatController@chatlist');
     Route::post('/massages/save', 'chatController@chatmassages')->name('');
+    Route::post('/postad/save/payment', 'postadController@postadpayment')->name('');
 
 
 

@@ -96,6 +96,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center text-center mt-3">
+                    <div class="col-lg-10 ">
+                        <div class="section_head pb-5 mb-3">
+
+                            <router-link to="/"><button class="btn btn-danger" id="text" role="button">Back</button></router-link>
+
+                        </div>
+                    </div>
+                </div>
+
 
 
             </diV>
@@ -173,4 +183,14 @@
     font-family: "Nunito", sans-serif;
     font-size: 40px;
 }
+    #text{
+        color: #4c110f;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+    }
+    button{
+        padding-left:100px ;
+        padding-right: 100px;
+    }
 </style>

@@ -3126,6 +3126,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3158,9 +3177,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       Datasave: 'data save successfully',
       submitStatus: null,
       payment_types: ['select-payment-method', 'Bkash', 'Rocket', 'Nogod'],
-      payment_type: 'select-payment-method',
-      TransectionID: ''
-    }, _defineProperty(_ref, "phone", ''), _defineProperty(_ref, "Username", this.$route.params.name), _ref;
+      publication_status: '0',
+      Username: this.$route.params.name,
+      payment_type: ''
+    }, _defineProperty(_ref, "phone", ''), _defineProperty(_ref, "TransectionID", ''), _ref;
   },
   validations: {
     RenterUsername: {
@@ -3184,7 +3204,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         full_address: this.full_address,
         About_rent: this.About_rent,
         user_type: this.user_type,
-        image_name: this.image_name
+        image_name: this.image_name,
+        publication_status: this.publication_status
       }).then(function (response) {
         console.log(response);
       })["catch"](function (error) {
@@ -3209,11 +3230,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     cash: function cash() {
       console.log('hi');
       axios.post('/postad/save/payment', {
-        payment_type: this.payment_type
+        payment_type: this.payment_type,
+        phone: this.phone,
+        TransectionID: this.TransectionID
       }).then(function (response) {
         console.log(response);
-      })["catch"](function (error) {
-        console.log(error);
       });
     }
   }
@@ -3230,6 +3251,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10085,7 +10116,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n#img[data-v-0b29737b]{\r\n    height: 350px;\r\n    width: 600px;\n}\n#img1[data-v-0b29737b]{\r\n    height: 350px;\r\n    width: 600px;\n}\nh3[data-v-0b29737b],h2[data-v-0b29737b]{\r\n        color: #4c110f;\r\n        font-family: 'Raleway', sans-serif;\n}\n#fulladdress[data-v-0b29737b]{\r\n    color: #19692c;\r\n    font-family: \"Nunito\", sans-serif;\r\n    font-size: 40px;\n}\r\n", ""]);
+exports.push([module.i, "\n#img[data-v-0b29737b]{\r\n    height: 350px;\r\n    width: 600px;\n}\n#img1[data-v-0b29737b]{\r\n    height: 350px;\r\n    width: 600px;\n}\nh3[data-v-0b29737b],h2[data-v-0b29737b]{\r\n        color: #4c110f;\r\n        font-family: 'Raleway', sans-serif;\n}\n#fulladdress[data-v-0b29737b]{\r\n    color: #19692c;\r\n    font-family: \"Nunito\", sans-serif;\r\n    font-size: 40px;\n}\n#text[data-v-0b29737b]{\r\n        color: #4c110f;\r\n        font-weight: bold;\r\n        font-family: 'Raleway', sans-serif;\r\n        font-size: 30px;\n}\nbutton[data-v-0b29737b]{\r\n        padding-left:100px ;\r\n        padding-right: 100px;\n}\r\n", ""]);
 
 // exports
 
@@ -56662,6 +56693,57 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-10 mt-3" }, [
+                  _c("label", { staticClass: "sr-only" }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group", attrs: { hidden: "" } },
+                    [
+                      _vm._m(18),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.publication_status,
+                              expression: "publication_status"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.publication_status = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Publish")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "0" } }, [
+                            _vm._v("UnPublish")
+                          ])
+                        ]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-10 mt-3" }, [
                   _c("div", { staticClass: "submit_form" }, [
                     _c(
                       "button",
@@ -56877,6 +56959,16 @@ var staticRenderFns = [
     return _c("div", { staticClass: "input-group-prepend" }, [
       _c("div", { staticClass: "input-group-text text-center" }, [
         _c("i", { staticClass: "fa fa-camera" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text text-center" }, [
+        _c("i", { staticClass: "fa fa-money-check" })
       ])
     ])
   }
@@ -57114,6 +57206,32 @@ var render = function() {
                     [_vm._v(_vm._s(_vm.form.About_rent))]
                   )
                 ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row justify-content-center text-center mt-3" },
+            [
+              _c("div", { staticClass: "col-lg-10 " }, [
+                _c(
+                  "div",
+                  { staticClass: "section_head pb-5 mb-3" },
+                  [
+                    _c("router-link", { attrs: { to: "/" } }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { id: "text", role: "button" }
+                        },
+                        [_vm._v("Back")]
+                      )
+                    ])
+                  ],
+                  1
+                )
               ])
             ]
           )

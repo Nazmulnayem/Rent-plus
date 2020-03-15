@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->text('parmanent_address');
             $table->text('present_address');
             $table->timestamp('email_verified_at')->nullable();
+            $table->tinyInteger('admin')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

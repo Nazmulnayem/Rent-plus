@@ -6,6 +6,7 @@ use App\likeinfo;
 use Illuminate\Http\Request;
 use App\postad;
 use Image;
+use App\Payment;
 
 class postadController extends Controller
 {
@@ -50,6 +51,7 @@ class postadController extends Controller
         $postad->About_rent = $request->About_rent;
         $postad->user_type = $request ->user_type;
         $postad->image_name = $name;
+        $postad->publication_status =$request->publication_status;
 
         $postad->save();
 
@@ -144,6 +146,16 @@ public function postadsearchallpost(){
         $likeinfos = likeinfo::where('like_from',$name)->get();
         return response()->json([
             'likeinfos' => $likeinfos],200);
+    }
+    public function postadpayment(Request $request){
+        $payment= new Payment();
+        $payment->payment_type = $request->payment_type;
+        $payment->phone = $request->phone;
+        $payment->TransectionID = $request->TransectionID;
+        $payment->save();
+
+
+
     }
 
 }

@@ -298,6 +298,25 @@
                             <img :src="image_name" alt="">
 
                         </div>
+                            <div class="col-lg-10 mt-3">
+                                <label class="sr-only">
+
+
+                                </label>
+                                <div class="input-group" hidden>
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text text-center"><i class="fa fa-money-check"></i></div>
+                                    </div>
+                                    <select  class="form-control" v-model="publication_status">
+
+                                        <option value="1">Publish</option>
+                                        <option value="0">UnPublish</option>
+
+
+                                    </select>
+                                </div>
+
+                            </div>
 
 
                             <div class="col-lg-10 mt-3">
@@ -323,6 +342,7 @@
     export default {
         data: function () {
             return {
+
                 post:[],
                 RenterUsername: '',
                 Housename: '',
@@ -349,10 +369,11 @@
                 Datasave:'data save successfully',
                 submitStatus:null,
                 payment_types:['select-payment-method','Bkash','Rocket','Nogod'],
-                payment_type:'select-payment-method',
-                TransectionID:'',
+                publication_status:'0',
+                Username:this.$route.params.name,
+                payment_type: '',
                 phone:'',
-            Username:this.$route.params.name
+                TransectionID:''
             }
         },
         validations: {
@@ -381,6 +402,7 @@
                     About_rent: this.About_rent,
                     user_type:this.user_type,
                     image_name:this.image_name,
+                    publication_status:this.publication_status,
 
                 })
                     .then(function (response) {
@@ -415,15 +437,18 @@
             cash(){
                 console.log('hi')
                 axios.post('/postad/save/payment', {
-                    payment_type  : this.payment_type
+                    payment_type  : this.payment_type,
+                    phone : this.phone,
+                    TransectionID:this.TransectionID
+
 
                 })
-                    .then(function (response) {
-                        console.log(response);
+                    .then((response) => {
+
+                        console.log(response)
+
+
                     })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
 
             }
         }

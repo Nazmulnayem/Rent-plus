@@ -29,6 +29,7 @@ class CreatePostadsTable extends Migration
             $table->text('About_rent');
             $table->string('image_name',200);
             $table->string('user_type',100);
+            $table->tinyInteger('publication_status');
 
             $table->timestamps();
         });

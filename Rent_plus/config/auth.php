@@ -46,6 +46,7 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        
     ],
 
     /*
@@ -98,6 +99,7 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
     ],
 
 ];
