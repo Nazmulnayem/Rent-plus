@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="row shadow-sm">
-                    <div class="col-lg-6 col-sm-6 pt-3 pb-3"  v-for="postad in getallpost" v-if="postad.user_type=='Top-Rents'">
+                    <div class="col-lg-6 col-sm-6 pt-3 pb-3"  v-for="postad in getallpost" v-if="postad.publication_status=='1'">
                         <div class="about_inner1 pl-5 pr-5 pt-5 pb-5" style="background:linear-gradient(to right,#d3ca27,rgba(43,43,43,0.43));">
                             <img :src="postadImg(postad.image_name)" style="height: 300px; width: 400px;">
                             <p class="mt-5"><i class="fas fa-user-tie"></i> Avaiable floor: {{postad.availablefloor}}</p>
@@ -161,7 +161,7 @@
                 <div class="row shadow-sm">
 
 
-                    <div class="col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad" v-for="postad in getallpost" v-if="postad.user_type=='All-Rents'">
+                    <div class="col-lg-4 col-sm-6 pt-3 pb-3 allrentsshad" v-for="postad in getallpost" v-if="postad.publication_status== '0'">
 
                         <div class="about_inner1 pl-5 pr-5 pt-5 pb-5" >
                             <img :src="postadImg(postad.image_name)" style="height: 200px; width: 200px; position: center">

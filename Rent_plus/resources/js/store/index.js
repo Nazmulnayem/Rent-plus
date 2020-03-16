@@ -12,7 +12,7 @@ export default{
     },
     actions:{
         allPost(context){
-            axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan/')
+            axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan')
                 .then(function (response) {
                     context.commit('postadall',response.data.postads)
                 })

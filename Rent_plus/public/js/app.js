@@ -54147,7 +54147,7 @@ var render = function() {
           "div",
           { staticClass: "row shadow-sm" },
           _vm._l(_vm.getallpost, function(postad) {
-            return postad.user_type == "Top-Rents"
+            return postad.publication_status == "1"
               ? _c("div", { staticClass: "col-lg-6 col-sm-6 pt-3 pb-3" }, [
                   _c(
                     "div",
@@ -54282,7 +54282,7 @@ var render = function() {
             { staticClass: "row shadow-sm" },
             [
               _vm._l(_vm.getallpost, function(postad) {
-                return postad.user_type == "All-Rents"
+                return postad.publication_status == "0"
                   ? _c(
                       "div",
                       {
@@ -76750,7 +76750,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   actions: {
     allPost: function allPost(context) {
-      axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan/').then(function (response) {
+      axios.get('/postad/manage/save/vue/abcd&kjhkhjkkhjnazmulHasan').then(function (response) {
         context.commit('postadall', response.data.postads);
       });
     }
