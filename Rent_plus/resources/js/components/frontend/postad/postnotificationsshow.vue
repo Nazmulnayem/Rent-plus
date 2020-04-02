@@ -12,7 +12,7 @@
                         </thead>
                         <tbody v-for="notification in notifications" >
                         <tr>
-                            <th scope="row" ><router-link :to="`/postadetails/${notification.post_id}`">You Liked {{notification.Housename}} {{notification.created_at}}</router-link></th>
+                            <th scope="row" ><router-link :to="`/postadetails/a=100&a=rentplus&&locale=en${notification.post_id}`">You Liked {{notification.Housename}} {{notification.created_at}}</router-link></th>
 
                         </tr>
                         </tbody>

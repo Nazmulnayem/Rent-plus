@@ -33,7 +33,15 @@ class adminController extends Controller
     }
     public function postadedit($id){
 
-        $postadsByID = postad::where('id',$id);
+        $postadsByID = postad::where('id',$id)->first();
         return view('frontEnd.admin.postinfoedit',['postadsByID' =>$postadsByID]);
+    }
+    public function postadupdate(Request $request){
+       $postads = postad::find($request->id);
+        $postads->publication_status =$request->publication_status;
+
+        $postads->save();
+        return redirect()->route('admin');
+
     }
 }

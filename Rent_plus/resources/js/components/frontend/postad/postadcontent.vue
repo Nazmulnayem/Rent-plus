@@ -3,14 +3,14 @@
         <div class="container ">
             <div class="row">
                 <div class="col-lg-8 bg-white form_class shadow-lg">
-                    <div class="text-center mt-4">
+                    <div class="text-center mt-5">
                         <h1 >Post A Rent </h1>
 
 
                     </div>
                     <form>
                         <div class="form-row align-items-center username_margin">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" hidden>
                                 <label class="sr-only">
 
 
@@ -22,7 +22,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" hidden>
                                 <label class="sr-only">
 
 
@@ -57,23 +57,10 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text text-center"><i class="fa fa-phone"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Phone Number" v-model="phonenumber" @click="phone =! phone">
+                                    <input type="number" class="form-control" placeholder="Phone Number" v-model="phonenumber" @click="phone =! phone">
                                 </div>
                             </div>
-                            <div class="col-lg-10">
-                                <label class="sr-only">
 
-
-                                </label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <p v-if="phone"></p>
-                                    <p id="phone" v-else="phone">Your phone number is: {{phonenumber}}</p>
-
-                                </div>
-                            </div>
                             <div class="col-lg-10 mt-3">
                                 <label class="sr-only">
 
@@ -125,7 +112,7 @@
                                     <select class="form-control" v-model="budget_rent" >
 
                                         <option v-for="budget in budgets">{{budget}}</option>
-                                        <option v-for="n in 20">{{n}}k <</option>
+                                        <option v-for="n in 20"> {{n}}k ></option>
 
                                     </select>
                                 </div>
@@ -406,10 +393,10 @@
 
                 })
                     .then(function (response) {
-                        console.log(response);
+                        window.alert('post successfully')
                     })
                     .catch(function (error) {
-                        console.log(error);
+                        window.alert('Fill all the fields')
                     });
                 location.reload();
 

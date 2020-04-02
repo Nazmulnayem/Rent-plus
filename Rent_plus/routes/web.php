@@ -24,7 +24,8 @@ Route::get('/admin', 'adminController@postadinfo')->name('admin')->middleware('a
 Route::get('/payment', 'adminController@paymentinfo')->name('payment')->middleware('admin');
 Route::get('/admin-login', 'adminController@login')->name('admin-login');
 Route::get('/adminLogin', 'adminController@adminLogin')->name('adminLogin');
-Route::post('/edit/{id}', 'adminController@postadedit')->name('postad-edit');
+Route::get('/edit/{id}', 'adminController@postadedit')->name('postad-edit');
+Route::post('/postupdate', 'adminController@postadupdate')->name('update');
 
 Route::group(['middleware'=>'Rentplus'],function(){
     Route::get('/home', 'HomeController@index')->name('home');

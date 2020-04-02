@@ -37,7 +37,6 @@
                             <th scope="col">payment_type</th>
                             <th scope="col">phone</th>
                             <th scope="col">TransectionID</th>
-                            <th scope="col">manage</th>
 
 
 
@@ -52,8 +51,7 @@
                                 <th scope="row">{{$payment->TransectionID}}</th>
 
 
-                                <td><a href="">Edit</a></td>
-                                <td><a href="">Delete</a></td>
+
                             </tr>
                             </tbody>
                         @endforeach

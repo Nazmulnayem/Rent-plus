@@ -15,19 +15,19 @@ export const routes = [
         component: homecomponent
     },
     {
-        path:'/profile/:name',
+        path:'/profile/a=100&a=rentplus&&locale=en:name',
         component: profile
     },
     {
-        path:'/profile/profile-edit/:id',
+        path:'/profile/profile-edit/a=100&a=rentplus&&locale=en:id',
         component: profilepostedit
     },
     {
-        path:'/postad/:name',
+        path:'/postad/a=100&a=rentplus&&locale=en:name',
         component: postadcomponent
     },
     {
-        path:'/postadetails/:id',
+        path:'/postadetails/a=100&a=rentplus&&locale=en:id',
         component: postdetails
     },
     {
@@ -35,20 +35,20 @@ export const routes = [
         component: postsearch
     },
     {
-        path:'/chat/:name',
+        path:'/chat/a=100&a=rentplus&&locale=en:name',
         component: chat
     },
     {
-        path:'/chatlist/:name',
+        path:'/chatlist/a=100&a=rentplus&&locale=en:name',
         component: chatlist
     },
     {
-        path:'/postadlike/:id',
+        path:'/postadlike/a=100&a=rentplus&&locale=en:id',
         component: postadnotifications
 
     },
     {
-        path:'/notifications/:name',
+        path:'/notifications/a=100&a=rentplus&&locale=en:name',
         component: postnotificationsshow
 
     }

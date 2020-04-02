@@ -37,16 +37,16 @@
 
                     <li class="nav-item">
 
-                        <router-link :to="`/chatlist/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="My Chats" ><i class="far fa-comments"></i><span class="badge badge-light">2</span></a></router-link>
+                        <router-link :to="`/chatlist/a=100&a=rentplus&&locale=en{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="My Chats" ><i class="far fa-comments"></i><span class="badge badge-light">2</span></a></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="`/notifications/{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>
+                        <router-link :to="`/notifications/a=100&a=rentplus&&locale=en{{Auth::user()->name}}`"> <a to="/home" class="nav-link" data-toggle="tooltip" data-placement="top" title="Notification"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a></router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="`/profile/{{Auth::user()->name}}`"><a to="/home" class="nav-link" title="My Profile"><i class="fas fa-user-circle"></i></a></router-link>
+                        <router-link :to="`/profile/a=100&a=rentplus&&locale=en{{Auth::user()->name}}`"><a to="/home" class="nav-link" title="My Profile"><i class="fas fa-user-circle"></i></a></router-link>
                     </li>
                     <li class="nav-item postad_item">
-                        <router-link :to="`/postad/{{Auth::user()->name}}`"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>
+                        <router-link :to="`/postad/a=100&a=rentplus&&locale=en{{Auth::user()->name}}`"> <a  class="nav-link post_ad" >Post RENT+ </a></router-link>
                     </li>
                     <li class="nav-item ">
                         <router-link to="/"><a class="nav-link"><i class="fas fa-user-tie"></i> Hi {{ Auth::user()->name}}</a></router-link>
@@ -80,7 +80,7 @@
                     <div class="col-lg-12">
 
                         <h2 class="postadd_h1">Post your ads at free cost to reach more people in Online.</h2>
-                        <button type="button" class="btn btn-info mt-3 shadow-lg"><router-link :to="`/postad/{{Auth::user()->name}}`"><a >Post your Rent Advertisement Here</a></router-link></button>
+                        <button type="button" class="btn btn-info mt-3 shadow-lg"><router-link :to="`/postad/a=100&a=rentplus&&locale=en{{Auth::user()->name}}`"><a >Post your Rent Advertisement Here</a></router-link></button>
 
 
                     </div>

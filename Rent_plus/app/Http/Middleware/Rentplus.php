@@ -19,6 +19,7 @@ class Rentplus
 
         if(Auth::check()){
             return $next($request);
+            
 
         }
         return redirect('/login');

@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light head_menu shadow-sm " id="header" >
     <div class="container clearfix " >
-        <a class="navbar-brand " href="{{url('/')}}"><img src="/frontend/image/rp.PNG" alt=""></a>
+        <a class="navbar-brand " href="{{route('login')}}"><img src="/frontend/image/rp.PNG" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" >
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,10 +14,10 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Chat" href="#"><i class="far fa-comments"></i><span class="badge badge-light">2</span></a>
+                    <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Chat" href="{{route('login')}}"><i class="far fa-comments"></i><span class="badge badge-light"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('login')}}" data-toggle="tooltip" data-placement="top" title="Notification" href="#"><i class="fas fa-bell"></i><span class="badge badge-light">4</span></a>
+                    <a class="nav-link" href="{{route('login')}}" data-toggle="tooltip" data-placement="top" title="Notification" href="#"><i class="fas fa-bell"></i><span class="badge badge-light"></span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('login')}}" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fas fa-user-circle"></i></a>

@@ -12,8 +12,8 @@
                 </div>
                 <div class="row justify-content-center" v-for="chat in chats">
                     <div class="col-lg-6">
-                        <p><router-link class="chatboxto" :to="`/chat/${chat.to}`">Massagelink-1 {{chat.from}} sent massage {{chat.to}}</router-link></p>
-                        <p><router-link class="chatboxfrom" :to="`/chat/${chat.from}`">Massagelink-2 {{chat.from}} sent massage {{chat.to}}</router-link></p>
+                        <p><router-link class="chatboxto" :to="`/chat/a=100&a=rentplus&&locale=en${chat.to}`">Massagelink-1 {{chat.from}} sent massage {{chat.to}}</router-link></p>
+                        <p><router-link class="chatboxfrom" :to="`/chat/a=100&a=rentplus&&locale=en${chat.from}`">Massagelink-2 {{chat.from}} sent massage {{chat.to}}</router-link></p>
 
                     </div>
 

@@ -28,7 +28,7 @@
                             <p ><i class="fas fa-check-circle"></i> Created-at: {{postad.created_at}}</p>
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                              <router-link :to="`/profile/profile-edit/${postad.id}`"><a  class="mr-5" role="button" title="Update" style="font-size: 26px;"><i class="fas fa-edit"></i></a></router-link>
+                              <router-link :to="`/profile/profile-edit/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Update" style="font-size: 26px;"><i class="fas fa-edit"></i></a></router-link>
                                <a href="" @click.prevent="deletepost(postad.id)" class="mr-5" role="button" title="Delete" style="font-size: 26px;"><i class="fas fa-trash-alt"></i></a>
 
                             </div>

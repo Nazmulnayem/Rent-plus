@@ -7,7 +7,7 @@
                 <div class="carousel-inner">
 
 
-                    <div class="carousel-item active" style="background:linear-gradient(to right,#0c5460,#4e555b);">
+                    <div class="carousel-item active" style="background:url(frontend/image/rentimg7.jpg);">
                         <div class="carousel-caption">
                             <h1 class="bounceIn mb-5">Search here your expected query</h1>
                             <p></p>
@@ -92,10 +92,11 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <router-link :to="`/postadlike/${postad.id}`"><a  class="mr-5" role="button" title="Save this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
-                                <router-link to="/chat"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
+                                <router-link :to="`/postadlike/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Save this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
+                                <router-link :to="`/chat/a=100&a=rentplus&&locale=en${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
-                                <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
+
+                                <router-link :to="`/postadetails/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
                         </div>
 
@@ -131,10 +132,10 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <router-link :to="`/postadlike/${postad.id}`"><a  class="mr-5" role="button" title="Save this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
-                                <router-link :to="`/chat/${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
+                                <router-link :to="`/postadlike/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Save this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
+                                <router-link :to="`/chat/a=100&a=rentplus&&locale=en${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
 
-                                <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
+                                <router-link :to="`/postadetails/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
                         </div>
 
@@ -173,9 +174,9 @@
 
                             <p ><i class="fas fa-check-circle"></i> click here for details</p>
                             <div class="">
-                                <router-link :to="`/postadlike/${postad.id}`"><a  class="mr-5" role="button" title="Like this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
-                                <router-link :to="`/chat/${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
-                                <router-link :to="`/postadetails/${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
+                                <router-link :to="`/postadlike/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Like this post" style="font-size: 26px;"><i class="fa fa-user"></i></a></router-link>
+                                <router-link :to="`/chat/a=100&a=rentplus&&locale=en${postad.RenterUsername}`"><a class="mr-5" role="button" title="Send Message" style="font-size: 26px;"><i class="far fa-comments"></i></a></router-link>
+                                <router-link :to="`/postadetails/a=100&a=rentplus&&locale=en${postad.id}`"><a  class="mr-5" role="button" title="Details" style="font-size: 26px;"><i class="fas fa-eye"></i></a></router-link>
                             </div>
                         </div>
 

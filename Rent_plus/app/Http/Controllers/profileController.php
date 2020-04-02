@@ -29,6 +29,7 @@ class profileController extends Controller
         if(file_exists($image)){
             @unlink($image);
         }
+
         $post->delete();
 
     }

@@ -2073,6 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2677,16 +2678,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     updatePost: function updatePost() {
-      var _this3 = this;
-
       this.form.post("/update/".concat(this.$route.params.id)).then(function () {
-        _this3.$router.push('/');
-
-        toast({
-          type: 'success',
-          title: 'Post Updated successfully'
-        });
+        window.alert('post updated successfully');
       })["catch"](function () {});
+      this.$router.push('/');
     },
     updateImage: function updateImage() {
       var img = this.form.image_name;
@@ -3132,19 +3127,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3207,9 +3189,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         image_name: this.image_name,
         publication_status: this.publication_status
       }).then(function (response) {
-        console.log(response);
+        window.alert('post successfully');
       })["catch"](function (error) {
-        console.log(error);
+        window.alert('Fill all the fields');
       });
       location.reload();
     },
@@ -3567,7 +3549,9 @@ __webpack_require__.r(__webpack_exports__);
           post_id: this.postId,
           Housename: this.form.Housename
         }
-      }).then(function (response) {})["catch"](function (error) {
+      }).then(function (response) {
+        window.alert('save successfully');
+      })["catch"](function (error) {
         console.log();
       });
       this.$router.push('/');
@@ -53714,7 +53698,7 @@ var render = function() {
                 {
                   staticClass: "carousel-item active",
                   staticStyle: {
-                    background: "linear-gradient(to right,#0c5460,#4e555b)"
+                    background: "url(frontend/image/rentimg7.jpg)"
                   }
                 },
                 [
@@ -54074,7 +54058,13 @@ var render = function() {
                             [
                               _c(
                                 "router-link",
-                                { attrs: { to: "/postadlike/" + postad.id } },
+                                {
+                                  attrs: {
+                                    to:
+                                      "/postadlike/a=100&a=rentplus&&locale=en" +
+                                      postad.id
+                                  }
+                                },
                                 [
                                   _c(
                                     "a",
@@ -54091,24 +54081,44 @@ var render = function() {
                                 ]
                               ),
                               _vm._v(" "),
-                              _c("router-link", { attrs: { to: "/chat" } }, [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "mr-5",
-                                    staticStyle: { "font-size": "26px" },
-                                    attrs: {
-                                      role: "button",
-                                      title: "Send Message"
-                                    }
-                                  },
-                                  [_c("i", { staticClass: "far fa-comments" })]
-                                )
-                              ]),
+                              _c(
+                                "router-link",
+                                {
+                                  attrs: {
+                                    to:
+                                      "/chat/a=100&a=rentplus&&locale=en" +
+                                      postad.RenterUsername
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "mr-5",
+                                      staticStyle: { "font-size": "26px" },
+                                      attrs: {
+                                        role: "button",
+                                        title: "Send Message"
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "far fa-comments"
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
                               _vm._v(" "),
                               _c(
                                 "router-link",
-                                { attrs: { to: "/postadetails/" + postad.id } },
+                                {
+                                  attrs: {
+                                    to:
+                                      "/postadetails/a=100&a=rentplus&&locale=en" +
+                                      postad.id
+                                  }
+                                },
                                 [
                                   _c(
                                     "a",
@@ -54206,7 +54216,13 @@ var render = function() {
                         [
                           _c(
                             "router-link",
-                            { attrs: { to: "/postadlike/" + postad.id } },
+                            {
+                              attrs: {
+                                to:
+                                  "/postadlike/a=100&a=rentplus&&locale=en" +
+                                  postad.id
+                              }
+                            },
                             [
                               _c(
                                 "a",
@@ -54225,7 +54241,13 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "router-link",
-                            { attrs: { to: "/chat/" + postad.RenterUsername } },
+                            {
+                              attrs: {
+                                to:
+                                  "/chat/a=100&a=rentplus&&locale=en" +
+                                  postad.RenterUsername
+                              }
+                            },
                             [
                               _c(
                                 "a",
@@ -54244,7 +54266,13 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "router-link",
-                            { attrs: { to: "/postadetails/" + postad.id } },
+                            {
+                              attrs: {
+                                to:
+                                  "/postadetails/a=100&a=rentplus&&locale=en" +
+                                  postad.id
+                              }
+                            },
                             [
                               _c(
                                 "a",
@@ -54347,7 +54375,13 @@ var render = function() {
                               [
                                 _c(
                                   "router-link",
-                                  { attrs: { to: "/postadlike/" + postad.id } },
+                                  {
+                                    attrs: {
+                                      to:
+                                        "/postadlike/a=100&a=rentplus&&locale=en" +
+                                        postad.id
+                                    }
+                                  },
                                   [
                                     _c(
                                       "a",
@@ -54368,7 +54402,9 @@ var render = function() {
                                   "router-link",
                                   {
                                     attrs: {
-                                      to: "/chat/" + postad.RenterUsername
+                                      to:
+                                        "/chat/a=100&a=rentplus&&locale=en" +
+                                        postad.RenterUsername
                                     }
                                   },
                                   [
@@ -54394,7 +54430,11 @@ var render = function() {
                                 _c(
                                   "router-link",
                                   {
-                                    attrs: { to: "/postadetails/" + postad.id }
+                                    attrs: {
+                                      to:
+                                        "/postadetails/a=100&a=rentplus&&locale=en" +
+                                        postad.id
+                                    }
                                   },
                                   [
                                     _c(
@@ -54755,7 +54795,9 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "chatboxto",
-                        attrs: { to: "/chat/" + chat.to }
+                        attrs: {
+                          to: "/chat/a=100&a=rentplus&&locale=en" + chat.to
+                        }
                       },
                       [
                         _vm._v(
@@ -54777,7 +54819,9 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "chatboxfrom",
-                        attrs: { to: "/chat/" + chat.from }
+                        attrs: {
+                          to: "/chat/a=100&a=rentplus&&locale=en" + chat.from
+                        }
                       },
                       [
                         _vm._v(
@@ -54922,7 +54966,9 @@ var render = function() {
                               "router-link",
                               {
                                 attrs: {
-                                  to: "/profile/profile-edit/" + postad.id
+                                  to:
+                                    "/profile/profile-edit/a=100&a=rentplus&&locale=en" +
+                                    postad.id
                                 }
                               },
                               [
@@ -55942,7 +55988,7 @@ var render = function() {
               "div",
               { staticClass: "form-row align-items-center username_margin" },
               [
-                _c("div", { staticClass: "col-lg-10" }, [
+                _c("div", { staticClass: "col-lg-10", attrs: { hidden: "" } }, [
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c(
@@ -55989,7 +56035,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-lg-10" }, [
+                _c("div", { staticClass: "col-lg-10", attrs: { hidden: "" } }, [
                   _c("label", { staticClass: "sr-only" }),
                   _vm._v(" "),
                   _c("div", { staticClass: "input-group" }, [
@@ -56066,7 +56112,7 @@ var render = function() {
                         }
                       ],
                       staticClass: "form-control",
-                      attrs: { type: "text", placeholder: "Phone Number" },
+                      attrs: { type: "number", placeholder: "Phone Number" },
                       domProps: { value: _vm.phonenumber },
                       on: {
                         click: function($event) {
@@ -56080,22 +56126,6 @@ var render = function() {
                         }
                       }
                     })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-lg-10" }, [
-                  _c("label", { staticClass: "sr-only" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "input-group" }, [
-                    _c("div", { staticClass: "input-group-prepend" }),
-                    _vm._v(" "),
-                    _vm.phone
-                      ? _c("p")
-                      : _c("p", { attrs: { id: "phone" } }, [
-                          _vm._v(
-                            "Your phone number is: " + _vm._s(_vm.phonenumber)
-                          )
-                        ])
                   ])
                 ]),
                 _vm._v(" "),
@@ -56248,7 +56278,7 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _vm._l(20, function(n) {
-                          return _c("option", [_vm._v(_vm._s(n) + "k <")])
+                          return _c("option", [_vm._v(" " + _vm._s(n) + "k >")])
                         })
                       ],
                       2
@@ -56773,7 +56803,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center mt-4" }, [
+    return _c("div", { staticClass: "text-center mt-5" }, [
       _c("h1", [_vm._v("Post A Rent ")])
     ])
   },
@@ -57544,7 +57574,9 @@ var render = function() {
                           "router-link",
                           {
                             attrs: {
-                              to: "/postadetails/" + notification.post_id
+                              to:
+                                "/postadetails/a=100&a=rentplus&&locale=en" +
+                                notification.post_id
                             }
                           },
                           [
@@ -76700,31 +76732,31 @@ var routes = [{
   path: '/',
   component: _components_admin_adminhome__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
-  path: '/profile/:name',
+  path: '/profile/a=100&a=rentplus&&locale=en:name',
   component: _components_frontend_includes_profile__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
-  path: '/profile/profile-edit/:id',
+  path: '/profile/profile-edit/a=100&a=rentplus&&locale=en:id',
   component: _components_frontend_includes_profilepostedit__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
-  path: '/postad/:name',
+  path: '/postad/a=100&a=rentplus&&locale=en:name',
   component: _components_frontend_postad_postadcontent__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
-  path: '/postadetails/:id',
+  path: '/postadetails/a=100&a=rentplus&&locale=en:id',
   component: _components_frontend_postad_postadetails__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   path: '/postad/search',
   component: _components_frontend_postad_postadSearch__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
-  path: '/chat/:name',
+  path: '/chat/a=100&a=rentplus&&locale=en:name',
   component: _components_frontend_includes_chat__WEBPACK_IMPORTED_MODULE_6__["default"]
 }, {
-  path: '/chatlist/:name',
+  path: '/chatlist/a=100&a=rentplus&&locale=en:name',
   component: _components_frontend_includes_chatlist__WEBPACK_IMPORTED_MODULE_7__["default"]
 }, {
-  path: '/postadlike/:id',
+  path: '/postadlike/a=100&a=rentplus&&locale=en:id',
   component: _components_frontend_postad_postnotificationsconfirm__WEBPACK_IMPORTED_MODULE_8__["default"]
 }, {
-  path: '/notifications/:name',
+  path: '/notifications/a=100&a=rentplus&&locale=en:name',
   component: _components_frontend_postad_postnotificationsshow__WEBPACK_IMPORTED_MODULE_9__["default"]
 }];
 

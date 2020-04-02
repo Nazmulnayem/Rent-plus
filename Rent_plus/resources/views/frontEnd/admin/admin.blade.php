@@ -75,7 +75,7 @@
                             <th scope="row">{{$postad->publication_status}}</th>
 
 
-                            <td><a href="{{route('postad-edit')}}">Edit</a></td>
+                            <td><a href="{{url('/edit/'.$postad->id)}}">Edit</a></td>
                             <td><a href="">Delete</a></td>
                         </tr>
                         </tbody>

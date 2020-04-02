@@ -283,14 +283,12 @@
             updatePost(){
                 this.form.post(`/update/${this.$route.params.id}`)
                     .then(()=>{
-                        this.$router.push('/')
-                        toast({
-                            type: 'success',
-                            title: 'Post Updated successfully'
-                        })
+                        window.alert('post updated successfully')
+
                     })
                     .catch(()=>{
                     })
+                this.$router.push('/')
             },
             updateImage(){
                 let img = this.form.image_name;

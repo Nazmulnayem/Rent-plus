@@ -13,10 +13,10 @@
             <div class="carousel-inner">
 
 
-                <div class="carousel-item active" style="background:#00B1D2FF;">
+                <div class="carousel-item active" style="background:url(frontend/image/rentimg2.jpg);">
                     <div class="carousel-caption">
                         <h1 class="bounceIn mb-3">Rent a house got more easier now!</h1>
-                        <p>You don't have to wast your time to search a Rent , Rentplus already solve your all problem bae</p>
+                        <p>You don't have to wast your time to search a Rent , Rentplus already solve your all problem.</p>
 
                         <button type="button" class="btn btn-info mt-5 shadow-lg"><a href="{{route('login')}}">Get start</a></button>
 
@@ -24,10 +24,10 @@
 
 
                 </div>
-                <div class="carousel-item" style="background:#bd2130;">
+                <div class="carousel-item" style="background:url(frontend/image/rp1.jpg);">
                     <div class="carousel-caption">
                         <h1 class="bounceIn mb-3">Rent a house got more easier now!</h1>
-                        <p>You don't have to wast your time to search a Rent , Rentplus already solve your all problem bae</p>
+                        <p>You don't have to wast your time to search a Rent , Rentplus already solve your all problem.</p>
 
                         <button type="button" class="btn btn-info mt-5 shadow-lg"><a href="{{route('login')}}">Get start</a></button>
 
@@ -35,6 +35,7 @@
 
 
                 </div>
+
         </div>
         </div>
 
@@ -117,8 +118,8 @@
 
     </section>
     <section class="post_add">
-        <div class="jumbotron ">
-            <div class="container ">
+        <div class="jumbotron " style="background:url(frontend/image/rentimg2.jpg);">
+            <div class="container " >
                 <div class="row align-content-center text-center">
                     <div class="col-lg-12">
 
