@@ -17,7 +17,11 @@ class admin
     public function handle($request, Closure $next)
     {
 
+        if(auth()->user()->admin == 1){
             return $next($request);
+        }
+
+        return redirect('/login');
 
 
     }

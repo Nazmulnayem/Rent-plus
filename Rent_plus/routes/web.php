@@ -20,12 +20,17 @@ Auth::routes();
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
-Route::get('/admin', 'adminController@postadinfo')->name('admin')->middleware('admin');
-Route::get('/payment', 'adminController@paymentinfo')->name('payment')->middleware('admin');
-Route::get('/admin-login', 'adminController@login')->name('admin-login');
-Route::get('/adminLogin', 'adminController@adminLogin')->name('adminLogin');
-Route::get('/edit/{id}', 'adminController@postadedit')->name('postad-edit');
-Route::post('/postupdate', 'adminController@postadupdate')->name('update');
+
+Route::group(['middleware'=>'admin'],function(){
+    Route::get('/admin', 'adminController@postadinfo')->name('admin');
+    Route::get('/payment', 'adminController@paymentinfo')->name('payment');
+    Route::get('/admin-login', 'adminController@login')->name('admin-login');
+    Route::get('/adminLogin', 'adminController@adminLogin')->name('adminLogin');
+    Route::get('/edit/{id}', 'adminController@postadedit')->name('postad-edit');
+    Route::post('/postupdate', 'adminController@postadupdate')->name('update');
+
+
+});
 
 Route::group(['middleware'=>'Rentplus'],function(){
     Route::get('/home', 'HomeController@index')->name('home');
