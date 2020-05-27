@@ -1,5 +1,11 @@
 # Rent-plus
 A Virtual and financial communication between Houseowner and Renter
 
-Rentplus is single page application where Renter can search,save post,chat with house-owner.Houseowner can give post for rent,can edit and update Post their own post dynamically.I tried to develop an user friendly super-fast web Application for time and money saving .I will give some better advantage than existing online platform.
+Clone the repo.
+Create a .env file by running the following command cp .env.example .env
+Install various packages and dependencies: composer install
+Run migrations then seed the database:
+php artisan migrate
+php artisan db:seed
+Generate an encryption key for the app: php artisan key:generate.
 
